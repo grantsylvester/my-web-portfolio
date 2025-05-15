@@ -9,6 +9,11 @@ to be a more light-hearted, less professional sounding portfolio.
 ## Added
 
 - index.html: website entry point
+    - Introduction
+    - Profile Photo
+    - Interests
+    - "Why this page?" section
+    - LinkedIn link
 - README.md: this page
 
 ## Goals for this project
