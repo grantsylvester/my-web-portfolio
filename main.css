@@ -1,0 +1,16 @@
+*{
+    background-color: rgb(255, 248, 248);
+}
+
+.header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    border-style: hidden hidden solid hidden;
+    border-width: 2px;
+}
