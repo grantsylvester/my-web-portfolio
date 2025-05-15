@@ -2,8 +2,8 @@
 
 ## Intro
 
-This project is a personal undertaking of mine to create a project portfolio to talk about my interests, as well as projects that I  
-am unable to fit on my resume. I am using it as a way to learn the basics of HTML, CSS and (maybe) Javascript. The website is also meant  
+This project is a personal undertaking of mine to create a project portfolio to talk about my interests, as well as projects that I
+am unable to fit on my resume. I am using it as a way to learn the basics of HTML, CSS and (maybe) Javascript. The website is also meant
 to be a more light-hearted, less professional sounding portfolio.
 
 ## Added
