@@ -32,11 +32,13 @@ footer {
     border-style: solid solid solid solid;
     border-width: 1px;
     padding: 10px;
+    margin-top: 10px;
 }
 
 .projentry > p, 
 .projentry > p > small, 
 .projentry > p > a,
+.projentry > p > i,
 .projentry > p > small > i {
     background-color: lightgray;
 }

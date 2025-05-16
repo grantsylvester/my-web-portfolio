@@ -21,7 +21,9 @@
                 <dt>> <a href="#personal">Personal Projects</a></dt><br>
                 <dd>> <a href="#thisweb">This Website</a></dd><br>
                 <dt>> <a href="#school">School Projects</a></dt><br>
+                <dd>> <a href="#USBTrans">USB Transceiver</a></dd><br>
                 <dt>> <a href="#work">Work Projects</a></dt><br>
+                <dd>> <a href="#multibox">Multi-Box V2</a></dd><br>
             </dl>
         </div>
         <div id="content">
@@ -54,6 +56,10 @@
                     that website, as the tutorial uses markdown formatting instead of HTML. To learn HTML, I followed 
                     <a href="https://www.w3schools.com/html/default.asp">W3 School's guide</a>. They have a well structured online reference as
                     well as short quizzes at the end of every chapter, which I found super helpful <small>(and its also <i>free</i>)</small>.
+                    GitHub Pages requires that you push changes to main and wait for it to deploy the website again in order to see the results
+                    of your changes. In order to develope the website and see changes immediately, I installed the 
+                    <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> extension on VSCode, which
+                    let me open any html file in a local server by simply right clicking it.
                 </p>
                 <p>
                     I intend to keep working on this site to make it look prettier and also involve some Javascript somewhere. One thing that 
@@ -67,11 +73,91 @@
                 strong academic integrity</strong> <small>(not trying to get in trouble)</small>. These projects come from a variety 
                 of fields like RTL design, embedded systems, and software projects.
             </p>
+
+            <div class="projentry">
+                <h3 id="USBTrans" class="projheader">USB Transceiver</h3>
+                <p>
+                    The ASIC design lab class I took was one of the most challenging but also rewarding classes I have ever taken. Did
+                    it suck all of the free time out of my life? Yes. But the feeling of making a really good Systemverilog testbench
+                    to test a module that you created with a very thorough and detailed RTL diagram and see it all work (after debugging
+                    of course) really made it feel worth it. That or its Stockholm syndrome take your pick
+                </p>
+                <p>
+                    The final project for this course was a collaborative project where I teamed up with two other students and designed
+                    an <a href="https://developer.arm.com/documentation/ddi0211/k/level-two-interface/ahb-lite">AHB-lite</a> enabled USB 
+                    Transceiver. My specific portion of the project was the AHB subordinate device, responsible for communicating with an 
+                    SoC to operate the transceiver. Unfortunately, I cannot show my RTL, testbench, module, state
+                    diagram, or waveforms for academic integrity reasons but I assure you they were <i>beautiful</i>.
+                </p>
+                <p>
+                    Since I cannot show anything, I will instead recap one design challenge that I encountered and how I solved it. 
+                    In the end, my subordinate device was able to transfer data to and from the USB transceiver, and the USB data was stored in
+                    a FIFO data buffer that could only communicate 1 byte to/from my device per cycle. I had to design a finite state machine 
+                    to handle reads/writes of greater than 1 byte from the buffer. My initial solution was to try to stall the address phase
+                    of the transaction (hready low), load the bytes into an intermediate register, then allow the data phase to happen once the 
+                    data was available on hrdata. Unfortunately, this method contains an oversight in that I couldn't (reliably) pull hready low
+                    before the data phase. I had to stall the data phase, and due to the pipelined nature of AHB, that meant that I needed to register
+                    the old address, size, etc of the transaction because they are replaced by the information of the next transaction. So, I did 
+                    just that. I registered the inputs, and if the address of a transaction indicated that it was a buffer operation, my device would
+                    use those registered inputs rather than the current one.
+                </p>
+                <p>
+                    What this project did for me was demystifying the process of how computers are designed. Its always very easy to assume that its
+                    magic performed by someone smarter than you, but understanding even a smaller ASIC like this at the register level makes the
+                    whole ordeal seem more acheivable
+                </p>
+            </div>
+
+            <div class="projentry">
+                <h3 id="smarthome" class="projheader">Smart Home System</h3>
+                <p>
+                    In my microcontrollers class, I had a final project that required me to make a device using a STM32 microcontroller. My group
+                    decided to make a prototype for a smart home system, complete with an alarm, thermostat, and an LCD display to communicate to 
+                    the user any important information. The alarm system could be enabled and disabled with a keypad, and was set off by a hall
+                    effect sensor. If the alarm was triggered, a buzzer utilizing the microcontroller's PWM would sound. The thermostat consisted of
+                    a temperature sensor and a motor that served as a mock AC system. The temperature sensor was read with an ADC, and if the current
+                    temperature was higher than the target temperature (specified by the user with the keypad), the motor would turn on, as you would
+                    expect an automatic AC to work. Lastly, we used an SPI-enabled LCD display to display the alarm state, current temperature, and 
+                    target temperature to the user.
+                </p>
+            </div>
+
             <h2 id="work" class="header">Work Projects</h2>
             <p>
-                This section covers projects that I have completed at past jobs.
+                This section covers projects that I have completed at past jobs. I won't go into a ton of detail on these, as my past internships
+                are well detailed in my resume and on my LinkedIn (see footer for link).
             </p>
+
+            <div class = projentry>
+                <h3 id="multibox" class="projheader">Multi-Box V2</h3>
+                <p>
+                    At my first internship with <a href="https://wavelogix.tech/">Wavelogix</a>, my main project was to create a "Multi-Box" that could
+                    operate up to 12 of the company's innovative concrete strength sensors at once in a lab testing scenario. This was my first
+                    step into the world of embedded systems, and I am still grateful for what I learned from it. It was this project that had me design
+                    and solder my first ever PCB using KiCad. I also learned 3D modeling and printing from this job, which is a skill that I am excited
+                    to utilize more in the future. The device utilized <a href="https://www.freertos.org/">FreeRTOS</a> on an 
+                    <a href="https://www.espressif.com/en/products/socs/esp32">ESP32</a> microcontroller. In operation, it would first connect to WiFi
+                    before connecting to a Microsoft Azure IoTHub. This is how the device was to communicate data to a Django application where it could
+                    be viewed online. Unfortunately the internship ended before we could finish the web app, but most of the physical box was completed.
+                </p>
+            </div>
+
         </div>
     </div>
+
+    <footer>
+            <br>
+            <address>
+                This website was developed by Grant Sylvester<br>
+                It is hosted with GitHub Pages from <a href="https://github.com/grantsylvester/my-web-portfolio">this repository</a><br>
+                Grant's GitHub profile is available here: <a href="https://github.com/grantsylvester">
+                    <img src="images/github_icon.png" style="width:14px;height:14px" alt="github icon">
+                </a><br>
+                Grant's LinkedIn is available here: <a href="https://www.linkedin.com/in/gsylvester-engineer/">
+                    <img src="images/linkedin_icon.png" style="width:14px;height:14px;" alt="linkedin icon">
+                </a><br>
+            </address>
+        </footer>
+
 </body>
 </html>
