@@ -7,33 +7,71 @@
 </head>
 
 <body>
-    <nav>
-        <a class="navbar" href="index.html">Home</a>
-        <a class="navbar" href="projects.html">Tech Projects</a>
-    </nav>
-    <h1 class="header">Projects</h1>
-    <p>
-        Welcome to my projects page! This is where I will outline any of my fun projects that I have completed or am currently working on.
+    <div id="navbar">
+        <img id="navicon" src = "images/favicon.ico">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="projects.html">Tech Projects</a>
+        <a class="navlink" href="index.html">Music Projects (WIP)</a>
+    </div>
 
-    </p>
-    <h2 id="personal" class="header">Personal Projects</h2>
-    <p>
-        In this section I will talk about all of the fun personal projects that I have been working on or have completed
-        in my free time. Some of the projects that I have planned are very exciting and I am looking forward to filling this section in.
-    </p>
-    <h3 id="thisweb" class="projheader">This website</h3>
-    <p>
-        The first personal project I would like to cover is this website that you yourself are currently browsing!
-    </p>
-    <h2 id="school" class="header">School Projects</h2>
-    <p>
-        In this section I will cover various projects that I have completed <strong style="color: red;">while maintaining strong 
-        academic integrity</strong> <small>(not trying to get in trouble)</small>. These projects come from a variety of fields like 
-        RTL design, embedded systems, and software projects.
-    </p>
-    <h2 id="work" class="header">Work Projects</h2>
-    <p>
-        This section covers projects that I have completed at past jobs.
-    </p>
+    <div id="projcontainer">
+        <div id="contentbar">
+            <dl>
+                <dt>> <a href="#projtop">Top</a></dt><br>
+                <dt>> <a href="#personal">Personal Projects</a></dt><br>
+                <dd>> <a href="#thisweb">This Website</a></dd><br>
+                <dt>> <a href="#school">School Projects</a></dt><br>
+                <dt>> <a href="#work">Work Projects</a></dt><br>
+            </dl>
+        </div>
+        <div id="content">
+            <h1 id="projtop" class="header">Projects</h1>
+            <p>
+                Welcome to my projects page! This is where I will outline any of my fun projects that I have completed or am currently 
+                working on.
+            </p>
+            <h2 id="personal" class="header">Personal Projects</h2>
+            <p>
+                In this section I will talk about all of the fun personal projects that I have been working on or have completed
+                in my free time. Some of the projects that I have planned are very exciting and I am looking forward to filling this 
+                section in.
+            </p>
+
+            <div class = projentry>
+                <h3 id="thisweb" class="projheader">This Website</h3>
+                <p>
+                    The first personal project I would like to cover is this website that you yourself are currently browsing! I decided to
+                    make this website for several reasons. First, I wanted to learn HTML, CSS and Javascript in case I ever end up needing
+                    to design or at least understand a website or web application in my future. 
+                </p>
+                <p>
+                    Since I was interested in learning how to make a website, I decided that it would be a cool way to make a project
+                    portfolio where I can yap about all of my interests. And here we are!
+                </p>
+                <p>
+                    I made this website with GitHub Pages <small>(its <i>free</i>)</small>. To learn how to host a website from GitHub,
+                    I followed <a href="https://github.com/skills/github-pages">GitHub's tutorial</a> and made a test website. This is not
+                    that website, as the tutorial uses markdown formatting instead of HTML. To learn HTML, I followed 
+                    <a href="https://www.w3schools.com/html/default.asp">W3 School's guide</a>. They have a well structured online reference as
+                    well as short quizzes at the end of every chapter, which I found super helpful <small>(and its also <i>free</i>)</small>.
+                </p>
+                <p>
+                    I intend to keep working on this site to make it look prettier and also involve some Javascript somewhere. One thing that 
+                    I would like to add is a collapsible navigation bar, or perhaps some other smooth transitions.
+                </p>
+            </div>
+    
+            <h2 id="school" class="header">School Projects</h2>
+            <p>
+                In this section I will cover various projects that I have completed <strong>while maintaining 
+                strong academic integrity</strong> <small>(not trying to get in trouble)</small>. These projects come from a variety 
+                of fields like RTL design, embedded systems, and software projects.
+            </p>
+            <h2 id="work" class="header">Work Projects</h2>
+            <p>
+                This section covers projects that I have completed at past jobs.
+            </p>
+        </div>
+    </div>
 </body>
 </html>
