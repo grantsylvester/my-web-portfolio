@@ -7,7 +7,7 @@ body {
 }
 
 footer {
-    margin-left: 10px;
+    padding-left: 10px;
     margin-bottom: 10px;
     border-style: solid hidden hidden hidden;
     border-width: 2px;
@@ -150,4 +150,32 @@ a.navlink:active {
     flex: 75%;
     padding-left: 20px;
     margin-right: 20px;
+}
+
+#scrbutton > b {
+    background-color: inherit;
+}
+
+#scrbutton {
+    width:50px;
+    height:50px;
+    position: fixed;
+    bottom: 121px;
+    left: 0;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    
+    border: 1px solid maroon;
+
+    opacity: 20%;
+}
+
+#scrbutton:hover {
+    opacity: 100%
+}
+
+#scrbutton:active {
+    background-color: black;
+    color: white;
 }
