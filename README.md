@@ -14,6 +14,11 @@ to be a more light-hearted, less professional sounding portfolio.
     - Interests
     - "Why this page?" section
     - LinkedIn link
+- projects.html: tech projects page
+    - Introduction
+    - Personal, School and Work Projects section
+- main.css: style sheet for website
+- images folder: has all images used in website
 - README.md: this page
 
 ## Goals for this project
