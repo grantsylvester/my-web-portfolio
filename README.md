@@ -17,6 +17,7 @@ to be a more light-hearted, less professional sounding portfolio.
 - projects.html: tech projects page
     - Introduction
     - Personal, School and Work Projects section
+    - many project descriptions
     - Scroll-to-top button
     - Project entry dropdowns
 - Mobile friendly nav bar
