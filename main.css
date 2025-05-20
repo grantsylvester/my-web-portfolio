@@ -6,6 +6,31 @@ body {
     margin: 0;
 }
 
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: inherit;
+}
+
+h1 {
+    border-style: hidden hidden solid hidden;
+    border-width: 2px;
+    background-color: inherit;
+}
+
+h2, h3, small, b, strong, i, dl, dd, dt {
+    background-color: inherit;
+}
+
+a {
+    color: red;
+    background-color: inherit;
+}
+
+a:visited {
+    color: maroon;
+    background-color: inherit;
+}
+
 footer {
     padding-left: 10px;
     margin-bottom: 10px;
@@ -17,14 +42,25 @@ footer {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.projheader {
+.projheadercontainer.projheader {
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 10px;
-    border-style: solid solid solid solid;
+    border-style: hidden;
     border-width: 1px;
-    background-color: lightgray;
+    max-width: 90%;
+
+    display: inline;
+    order: 1;
+}
+
+.projheadercontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: inherit;
+    border-style: hidden hidden solid hidden;
 }
 
 .projentry {
@@ -35,30 +71,18 @@ footer {
     margin-top: 10px;
 }
 
-.projentry > p, 
-.projentry > p > small, 
-.projentry > p > a,
-.projentry > p > i,
-.projentry > p > small > i {
-    background-color: lightgray;
+.projentry > div > button {
+    color: black;
+    background-color: inherit;
+    border-style: hidden;
+    width: 40px;
+    height: 40px;
+
+    order: 2;
 }
 
-
-p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-h1 {
-    border-style: hidden hidden solid hidden;
-    border-width: 2px;
-}
-
-a {
-    color: red;
-}
-
-a:visited {
-    color: maroon;
+.projdesc {
+    background-color: inherit;
 }
 
 a.navlink {
@@ -140,20 +164,10 @@ a.navlink:active {
     color: black;
 }
 
-#contentbar > dl > dt,
-#contentbar > dl > dd, 
-#contentbar > * {
-    background-color: rgb(221, 85, 85);
-}
-
 #content {
     flex: 75%;
     padding-left: 20px;
     margin-right: 20px;
-}
-
-#scrbutton > b {
-    background-color: inherit;
 }
 
 #scrbutton {
