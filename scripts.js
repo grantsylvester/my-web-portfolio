@@ -3,19 +3,15 @@ let scrollButton;
 const hiddenProjects = [];
 
 function descDropdown(id) {
-    const itemsToToggle = document.getElementById(id).getElementsByTagName("p");
+    const itemToToggle = document.getElementById(id).getElementsByClassName("projentrycontent")[0];
     const button = document.getElementById(id).getElementsByTagName("button")[0];
     if(hiddenProjects.includes(id)) {
-        for(let i = 0; i < itemsToToggle.length; i++) {
-            itemsToToggle[i].style.display = "block";
-            button.innerHTML = "Hide";
-        }
+        itemToToggle.style.display = "block";
+        button.innerHTML = "Hide";
         removeHiddenProj(id);
     } else {
-        for(let i = 0; i < itemsToToggle.length; i++) {
-            itemsToToggle[i].style.display = "none";
-            button.innerHTML = "Show";
-        }
+        itemToToggle.style.display = "none";
+        button.innerHTML = "Show";
         hiddenProjects.push(id);
     }
 }

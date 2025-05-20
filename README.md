@@ -17,8 +17,9 @@ to be a more light-hearted, less professional sounding portfolio.
 - projects.html: tech projects page
     - Introduction
     - Personal, School and Work Projects section
-    - Mobile friendly nav bar
     - Scroll-to-top button
+    - Project entry dropdowns
+- Mobile friendly nav bar
 - main.css: style sheet for website
 - images folder: has all images used in website
 - README.md: this page
