@@ -21,11 +21,13 @@
                 <dt>> <a href="#projtop">Top</a></dt><br>
                 <dt>> <a href="#personal">Personal Projects</a></dt><br>
                 <dd>> <a href="#thisweb">This Website</a></dd><br>
+                <dd>> <a href="#minecraft">Minecraft Redstone Tomfoolery</a></dd><br>
                 <dt>> <a href="#school">School Projects</a></dt><br>
                 <dd>> <a href="#USBTrans">USB Transceiver</a></dd><br>
                 <dd>> <a href="#smarthome">Smart Home System</a></dd><br>
                 <dt>> <a href="#work">Work Projects</a></dt><br>
                 <dd>> <a href="#multibox">Multi-Box V2</a></dd><br>
+                <dd>> <a href="#relmicro">Radiation Effects Testing PCBs</a></dd><br>
             </dl>
         </div>
         <div id="content">
@@ -46,31 +48,85 @@
                     <button onclick="descDropdown('thisweb')">Hide</button>
                     <h3 class="projheader">This Website</h3>
                 </div>
-                <p>
-                    The first personal project I would like to cover is this website that you yourself are currently browsing! I decided to
-                    make this website for several reasons. First, I wanted to learn HTML, CSS and Javascript in case I ever end up needing
-                    to design or at least understand a website or web application in my future. 
-                </p>
-                <p>
-                    Since I was interested in learning how to make a website, I decided that it would also be a cool way to make a project
-                    portfolio where I can yap about all of my interests. And here we are!
-                </p>
-                <p>
-                    I made this website with GitHub Pages <small>(its <i>free</i>)</small>. To learn how to host a website from GitHub,
-                    I followed <a href="https://github.com/skills/github-pages">GitHub's tutorial</a> and made a test website. This is not
-                    that website, as the tutorial uses markdown formatting instead of HTML. To learn HTML, I followed 
-                    <a href="https://www.w3schools.com/html/default.asp">W3 School's guide</a>. They have a well structured online reference as
-                    well as short quizzes at the end of every chapter, which I found super helpful <small>(and its also <i>free</i>)</small>.
-                    GitHub Pages requires that you push changes to main and wait for it to deploy the website again in order to see the results
-                    of your changes. In order to develope the website and see changes immediately, I installed the 
-                    <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> extension on VSCode, which
-                    let me open any HTML file in a local server by simply right clicking it.
-                </p>
-                <p>
-                    I have added some Javascript code to the website (that nifty scroll to top button in the bottom left). One thing that 
-                    I would like to add is a collapsible navigation bar, or perhaps some other smooth transitions, so I will continue to 
-                    update the website as time goes on.
-                </p>
+                <div class="projentrycontent">
+                    <p>
+                        The first personal project I would like to cover is this website that you yourself are currently browsing! I decided to
+                        make this website for several reasons. First, I wanted to learn HTML, CSS and Javascript in case I ever end up needing
+                        to design or at least understand a website or web application in my future. 
+                    </p>
+                    <p>
+                        Since I was interested in learning how to make a website, I decided that it would also be a cool way to make a project
+                        portfolio where I can yap about all of my interests. And here we are!
+                    </p>
+                    <p>
+                        I made this website with GitHub Pages <small>(its <i>free</i>)</small>. To learn how to host a website from GitHub,
+                        I followed <a href="https://github.com/skills/github-pages">GitHub's tutorial</a> and made a test website. This is not
+                        that website, as the tutorial uses markdown formatting instead of HTML. To learn HTML, I followed 
+                        <a href="https://www.w3schools.com/html/default.asp">W3 School's guide</a>. They have a well structured online reference as
+                        well as short quizzes at the end of every chapter, which I found super helpful <small>(and its also <i>free</i>)</small>.
+                        GitHub Pages requires that you push changes to main and wait for it to deploy the website again in order to see the results
+                        of your changes. In order to develope the website and see changes immediately, I installed the 
+                        <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> extension on VSCode, which
+                        let me open any HTML file in a local server by simply right clicking it.
+                    </p>
+                    <p>
+                        Another goal I had for this project was to use it as an opportunity to learn some Javascript. I have so far accomplished
+                        this by adding the scroll to top button in the bottom left of your screen as well as the dropdowns buttons at the top
+                        of each project entry. Feel free to go to <kbd>right click > inspect element > sources > scripts.js</kbd> to see how I 
+                        accomplished the creation of all of the dropdowns with one function. I'm not sure if its the best way to do it, but it
+                        was my own creative solution and I am proud of it.
+                    </p>
+                    <p>
+                        Of course, I am not done developing this website, and I intend to learn how to make some smooth transitions next. I also plan
+                        on adding a Music projects page to cover that part of my life as well (the button is there but it just goes to the homepage).
+                        I also want to make a template for an image gallery for each of the projects on this page.
+                    </p>
+                </div>
+            </div>
+            <div id="minecraft" class="projentry">
+                <div class="projheadercontainer">
+                    <button onclick="descDropdown('minecraft')">Hide</button>
+                    <h3 class="projheader">Minecraft Redstone Tomfoolery</h3>
+                </div>
+                <div class="projentrycontent">
+                    <p>
+                        In case you were not aware, the game <i>Minecraft</i> has a fully fleshed-out electrical system called redstone. In the game,
+                        it is usually used for small practical things such as a button to open a door or a lever to turn on the lights in your base.
+                        If you are without limitations in creative mode, however, it becomes much easier to create much larger, real world circuitry.
+                    </p>
+                    <p>
+                        Growing up, this always seemed too hard to figure out, so I just played the game like a normal person instead of learning digital
+                        system design as a 10 year old <small>(biggest mistake of my life if you ask me)</small>. Now, however, I am <i>unemployed</i> and
+                        have learned how things like Systemverilog and RTL design work, so I thought I would give it a shot.
+                    </p>
+                    <p>
+                        The first thing that I did was learn some basic logic gates. These are not too hard, and usually only take up 2-blocks of space.
+                        The hardest part of redstone is the fact that if you place dust (wire) next to more dust, it <b>WILL</b> connect, so you really have to
+                        take advantage of the third dimension when designing circuits.
+                    </p>
+                    <h4>D Flip-Flop</h4>
+                    <p>
+                        The next thing I created was a digital flip-flop, and I wanted to do it with nothing but a gate level schematic. There are lots 
+                        of nifty and compact ways to make a lot of components, but I wanted to do it the primitive way first. I constructed it with only
+                        nor gates and much to my surprise, was successful on the first try. The output would only match the input if the enable signal was high
+                        and would otherwise remain at its original value.
+                    </p>
+                    <h4>8-Bit Register</h4>
+                    <p>
+                        After storing one bit, I thought I would store 8. Now, however, I ditched my primitive, gate-level flip-flop and found an online example
+                        of a compact and stackable one. These work by using <span title="Transfers an item to its destination upon receiving high signal">hoppers</span>
+                        with outputs connected in a feedback loop. A <span title="can detect if the nearby hopper contains an item">redstone comparator</span> checks
+                        if the hopper on the outside contains an item (1) or if it is empty (0). With clever block placement, you can make it so that the hoppers only
+                        transfer items if the enable signal is high, just like a flip-flop. This design is stackable, so all it takes to make an 8 bit register is
+                        to put 8 of these bad boys next to each other.
+                    </p>
+                    <h4>7-Segment Display</h4>
+                    <p>
+                        This is my current Minecraft project, and I have made good progress on it so far. I have created the 7 segment digit itself using redstone
+                        lamps, and I have connected 16 inputs to display 0-9 and A-F on it with a flick of the lever. The next step, which I am currently working on,
+                        is to make a 7 segment display decoder that will display the value in a 4 bit register on the display digit.
+                    </p>
+                </div>
             </div>
     
             <h2 id="school" class="header">School Projects</h2>
@@ -80,41 +136,64 @@
                 of fields like RTL design, embedded systems, and software projects.
             </p>
 
+            <div id="emrick" class="projentry">
+                <div class="projheadercontainer">
+                    <button onclick="descDropdown('emrick')">Hide</button>
+                    <h3 class="projheader">Project Emrick</h3>
+                </div>
+                <div class="projentrycontent">
+                    <p>
+                        One of the coolest projects to have been a part of at Purdue was Project Emrick. This project is the redesign of the Purdue "All-American" Marching
+                        Band's uniform lights. These lights are capable of being programmed with lightshows (similar to a drone show, but on a marching band!) for halftime
+                        shows at nightgames and nighttime parades alike. As a part of the software team, I helped program the devices. One specific thing that I contributed
+                        was the code for the status light on the top of each unit, that lets the user know if it is on, off, connecting to WiFi, low on battery, etc. The 
+                        project had its debut with the band's <a href="https://www.youtube.com/watch?v=GNstIQ6atBE">"Disney 101" halftime show</a> when Purdue played Oregon 
+                        and definitely put up a fight (L 0-35). Other contributions that I had were related to the assembly of the devices, which were comprised of an ESP32
+                        microcontroller, a small Li-ion battery, an external antenna, and the light strips (of course).
+                    </p>
+                    <p>
+                        I am super excited to see all of the cool things that the band does with these lights and I hope to continue to contribute to the project in the future.
+                    </p>
+                </div>
+            </div>
+
             <div id="USBTrans" class="projentry">
-                <div class = projheadercontainer>
+                <div class = "projheadercontainer">
                     <button onclick="descDropdown('USBTrans')">Hide</button>
                     <h3 class="projheader">USB Transceiver</h3>
                 </div>
-                <p>
-                    The ASIC design lab class I took was one of the most challenging but also rewarding classes I have ever taken. Did
-                    it suck all of the free time out of my life? Yes. But the feeling of making a really good Systemverilog testbench
-                    to test a module that you created with a very thorough and detailed RTL diagram and see it all work (after debugging
-                    of course) really made it feel worth it. That or its Stockholm syndrome take your pick
-                </p>
-                <p>
-                    The final project for this course was a collaborative project where I teamed up with two other students and designed
-                    an <a href="https://developer.arm.com/documentation/ddi0211/k/level-two-interface/ahb-lite">AHB-lite</a> enabled USB 
-                    Transceiver. My specific portion of the project was the AHB subordinate device, responsible for communicating with an 
-                    SoC to operate the transceiver. Unfortunately, I cannot show my RTL, testbench, module, state
-                    diagram, or waveforms for academic integrity reasons but I assure you they were <i>beautiful</i>.
-                </p>
-                <p>
-                    Since I cannot show anything, I will instead recap one design challenge that I encountered and how I solved it. 
-                    In the end, my subordinate device was able to transfer data to and from the USB transceiver, and the USB data was stored in
-                    a FIFO data buffer that could only communicate 1 byte to/from my device per cycle. I had to design a finite state machine 
-                    to handle reads/writes of greater than 1 byte from the buffer. My initial solution was to try to stall the address phase
-                    of the transaction (hready low), load the bytes into an intermediate register, then allow the data phase to happen once the 
-                    data was available on hrdata. Unfortunately, this method contains an oversight in that I couldn't (reliably) pull hready low
-                    before the data phase. I had to stall the data phase, and due to the pipelined nature of AHB, that meant that I needed to register
-                    the old address, size, etc of the transaction because they are replaced by the information of the next transaction. So, I did 
-                    just that. I registered the inputs, and if the address of a transaction indicated that it was a buffer operation, my device would
-                    use those registered inputs rather than the current one.
-                </p>
-                <p>
-                    What this project did for me was demystifying the process of how computers are designed. Its always very easy to assume that its
-                    magic performed by someone smarter than you, but understanding even a smaller ASIC like this at the register level makes the
-                    whole ordeal seem more acheivable
-                </p>
+                <div class="projentrycontent">
+                    <p>
+                        The ASIC design lab class I took was one of the most challenging but also rewarding classes I have ever taken. Did
+                        it suck all of the free time out of my life? Yes. But the feeling of making a really good Systemverilog testbench
+                        to test a module that you created with a very thorough and detailed RTL diagram and see it all work (after debugging
+                        of course) really made it feel worth it. That or its Stockholm syndrome take your pick
+                    </p>
+                    <p>
+                        The final project for this course was a collaborative project where I teamed up with two other students and designed
+                        an <a href="https://developer.arm.com/documentation/ddi0211/k/level-two-interface/ahb-lite">AHB-lite</a> enabled USB 
+                        Transceiver. My specific portion of the project was the AHB subordinate device, responsible for communicating with an 
+                        SoC to operate the transceiver. Unfortunately, I cannot show my RTL, testbench, module, state
+                        diagram, or waveforms for academic integrity reasons but I assure you they were <i>beautiful</i>.
+                    </p>
+                    <p>
+                        Since I cannot show anything, I will instead recap one design challenge that I encountered and how I solved it. 
+                        In the end, my subordinate device was able to transfer data to and from the USB transceiver, and the USB data was stored in
+                        a FIFO data buffer that could only communicate 1 byte to/from my device per cycle. I had to design a finite state machine 
+                        to handle reads/writes of greater than 1 byte from the buffer. My initial solution was to try to stall the address phase
+                        of the transaction (hready low), load the bytes into an intermediate register, then allow the data phase to happen once the 
+                        data was available on hrdata. Unfortunately, this method contains an oversight in that I couldn't (reliably) pull hready low
+                        before the data phase. I had to stall the data phase, and due to the pipelined nature of AHB, that meant that I needed to register
+                        the old address, size, etc of the transaction because they are replaced by the information of the next transaction. So, I did 
+                        just that. I registered the inputs, and if the address of a transaction indicated that it was a buffer operation, my device would
+                        use those registered inputs rather than the current one.
+                    </p>
+                    <p>
+                        What this project did for me was demystify the process of how computers are designed. Its always very easy to assume that its
+                        magic performed by someone smarter than you, but understanding even a smaller ASIC like this at the register level makes the
+                        whole ordeal seem more acheivable.
+                    </p>
+                </div>
             </div>
 
             <div id="smarthome" class="projentry">
@@ -122,16 +201,18 @@
                     <button onclick="descDropdown('smarthome')">Hide</button>
                     <h3 class="projheader">Smart Home System</h3>
                 </div>
-                <p>
-                    In my microcontrollers class, I had a final project that required me to make a device using a STM32 microcontroller. My group
-                    decided to make a prototype for a smart home system, complete with an alarm, thermostat, and an LCD display to communicate to 
-                    the user any important information. The alarm system could be enabled and disabled with a keypad, and was set off by a hall
-                    effect sensor. If the alarm was triggered, a buzzer utilizing the microcontroller's PWM would sound. The thermostat consisted of
-                    a temperature sensor and a motor that served as a mock AC system. The temperature sensor was read with an ADC, and if the current
-                    temperature was higher than the target temperature (specified by the user with the keypad), the motor would turn on, as you would
-                    expect an automatic AC to work. Lastly, we used an SPI-enabled LCD display to display the alarm state, current temperature, and 
-                    target temperature to the user.
-                </p>
+                <div class="projentrycontent">
+                    <p>
+                        In my microcontrollers class, I had a final project that required me to make a device using a STM32 microcontroller. My group
+                        decided to make a prototype for a smart home system, complete with an alarm, thermostat, and an LCD display to communicate to 
+                        the user any important information. The alarm system could be enabled and disabled with a keypad, and was set off by a hall
+                        effect sensor. If the alarm was triggered, a buzzer utilizing the microcontroller's PWM would sound. The thermostat consisted of
+                        a temperature sensor and a motor that served as a mock AC system. The temperature sensor was read with an ADC, and if the current
+                        temperature was higher than the target temperature (specified by the user with the keypad), the motor would turn on, as you would
+                        expect an automatic AC to work. Lastly, we used an SPI-enabled LCD display to display the alarm state, current temperature, and 
+                        target temperature to the user.
+                    </p>
+                </div>
             </div>
 
             <h2 id="work" class="header">Work Projects</h2>
@@ -145,16 +226,43 @@
                     <button onclick="descDropdown('multibox')">Hide</button>
                     <h3 class="projheader">Multi-Box V2</h3>
                 </div>
-                <p>
-                    At my first internship with <a href="https://wavelogix.tech/">Wavelogix</a>, my main project was to create a "Multi-Box" that could
-                    operate up to 12 of the company's innovative concrete strength sensors at once in a lab testing scenario. This was my first
-                    step into the world of embedded systems, and I am still grateful for what I learned from it. It was this project that had me design
-                    and solder my first ever PCB using KiCad. I also learned 3D modeling and printing from this job, which is a skill that I am excited
-                    to utilize more in the future. The device utilized <a href="https://www.freertos.org/">FreeRTOS</a> on an 
-                    <a href="https://www.espressif.com/en/products/socs/esp32">ESP32</a> microcontroller. In operation, it would first connect to WiFi
-                    before connecting to a Microsoft Azure IoTHub. This is how the device was to communicate data to a Django application where it could
-                    be viewed online. Unfortunately the internship ended before we could finish the web app, but most of the physical box was completed.
-                </p>
+                <div class="projentrycontent">
+                    <p>
+                        At my first internship with <a href="https://wavelogix.tech/">Wavelogix</a>, my main project was to create a "Multi-Box" that could
+                        operate up to 12 of the company's innovative concrete strength sensors at once in a lab testing scenario. This was my first
+                        step into the world of embedded systems, and I am still grateful for what I learned from it. It was this project that had me design
+                        and solder my first ever PCB using KiCad. I also learned 3D modeling and printing from this job, which is a skill that I am excited
+                        to utilize more in the future. The device utilized <a href="https://www.freertos.org/">FreeRTOS</a> on an 
+                        <a href="https://www.espressif.com/en/products/socs/esp32">ESP32</a> microcontroller. In operation, it would first connect to WiFi
+                        before connecting to a Microsoft Azure IoTHub. This is how the device was to communicate data to a Django application where it could
+                        be viewed online. Unfortunately the internship ended before we could finish the web app, but most of the physical box was completed.
+                    </p>
+                </div>
+            </div>
+
+            <div id="relmicro" class="projentry">
+                <div class="projheadercontainer">
+                    <button onclick="descDropdown('relmicro')">Hide</button>
+                    <h3 class="projheader">Radiation Effects Testing PCBs</h3>
+                </div>
+                <div class="projentrycontent">
+                    <p>
+                        In the summer of 2024 I interned with <a href="https://reliablemicrosystems.com/">Reliable Microsystems</a>. At Rel-Micro,
+                        I was a part of the PCB design team, whose job was to create the large circuit boards that the company uses to test its 
+                        radiation hardened ASICs in lab scenarios. While there, I participated in the design of 2 such PCBs, from start to finish.
+                        I made diagrams to map out the signals on the die pad of the chip, as well as documented all of my changes for future reference.
+                        Along with my team, we participated in multiple quality review meetings with the higher-ups of the company to ensure the PCB had
+                        no issues and minimal hazards such as parasitic capacitance/inductance, as these can be detrimental in a radiation testing environment.
+                    </p>
+                    <p>
+                        After completing this job, I feel like I am industry ready in terms of PCB design skills. I know KiCad like the back of my hand
+                        now, and am certain that I could pick up any other PCB software very quick thanks to my experience at Rel-Micro. Another software 
+                        that I was introduced to at Rel-Micro was 
+                        <a href="https://www.cadence.com/en_US/home/tools/custom-ic-analog-rf-design/layout-design/virtuoso-layout-suite.html">Cadence Virtuoso</a> 
+                        IC design software. While none of the large projects I worked on there involved Cadence, I was exposed to the software and got to
+                        design and run simulations on a small transistor level schematic that I made.
+                    </p>
+                </div>
             </div>
 
         </div>

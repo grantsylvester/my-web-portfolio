@@ -17,8 +17,18 @@ h1 {
     background-color: inherit;
 }
 
-h2, h3, small, b, strong, i, dl, dd, dt {
+h2, h3, h4, small, b, strong, i, dl, dd, dt, kbd {
     background-color: inherit;
+}
+
+span {
+    background-color: inherit;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+span:hover {
+    color: rgb(72, 72, 72);
 }
 
 a {
@@ -71,7 +81,7 @@ footer {
     margin-top: 10px;
 }
 
-.projentry > div > button {
+.projheadercontainer > button {
     color: black;
     background-color: inherit;
     border-style: hidden;
@@ -79,6 +89,10 @@ footer {
     height: 40px;
 
     order: 2;
+}
+
+.projentrycontent {
+    background-color: inherit;
 }
 
 .projdesc {
