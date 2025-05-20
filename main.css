@@ -6,48 +6,6 @@ body {
     margin: 0;
 }
 
-footer {
-    padding-left: 10px;
-    margin-bottom: 10px;
-    border-style: solid hidden hidden hidden;
-    border-width: 2px;
-}
-
-.header {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.projheader {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    border-style: solid solid solid solid;
-    border-width: 1px;
-    background-color: lightgray;
-}
-
-.projentry {
-    background-color: lightgray;
-    border-style: solid solid solid solid;
-    border-width: 1px;
-    padding: 10px;
-    margin-top: 10px;
-}
-
-.projdesc {
-    background-color: inherit;
-}
-
-.projentry > p, 
-.projentry > p > small, 
-.projentry > p > a,
-.projentry > p > i,
-.projentry > p > small > i {
-    background-color: lightgray;
-}
-
-
 p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: inherit;
@@ -70,6 +28,60 @@ a {
 
 a:visited {
     color: maroon;
+    background-color: inherit;
+}
+
+footer {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-style: solid hidden hidden hidden;
+    border-width: 2px;
+}
+
+.header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.projheadercontainer.projheader {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: hidden;
+    border-width: 1px;
+    max-width: 90%;
+
+    display: inline;
+    order: 1;
+}
+
+.projheadercontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: inherit;
+    border-style: hidden hidden solid hidden;
+}
+
+.projentry {
+    background-color: lightgray;
+    border-style: solid solid solid solid;
+    border-width: 1px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.projentry > div > button {
+    color: black;
+    background-color: inherit;
+    border-style: hidden;
+    width: 40px;
+    height: 40px;
+
+    order: 2;
+}
+
+.projdesc {
     background-color: inherit;
 }
 
