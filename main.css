@@ -100,25 +100,21 @@ footer {
 }
 
 a.navlink {
-    max-height: 60px;
-    max-width: 400px;
-    padding: 20px;
+    padding: 30px;
 
-    color: black;
+    color: white;
     text-decoration: none;
     text-align: center;
     font-size: large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-    border-style: solid;
-    border-color: rgb(217, 51, 51);
-    background-color: rgb(255, 184, 184);
+    background-color: maroon;
 
     flex: 30%;
 }
 
 a.navlink:hover {
-    background-color: rgb(192, 140, 140);
+    background-color: rgb(92, 0, 0);
 }
 
 a.navlink:active {
@@ -130,21 +126,18 @@ a.navlink:active {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: left;
 
-    background-color: rgb(221, 85, 85);
+    background-color: maroon;
     width: 100%;
-    top: 0;
-
-    border-style: solid hidden solid hidden;
-    border-width: 3px;
-    border-color: maroon;
 }
 
 #navicon {
     height: 60px;
     width: 60px;
     margin: 10px;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
 #projcontainer {
@@ -165,17 +158,39 @@ a.navlink:active {
 }
 
 #contentbar {
-    flex: 25%;
-    background-color: rgb(221, 85, 85);
+    flex: 17%;
+    background-color: rgb(70, 70, 70);
     padding-left: 10px;
+
+    color: lightgray;
 }
 
 #contentbar > dl > dd > a,
 #contentbar > dl > dt > a {
-    background-color: rgb(221, 85, 85);
+    background-color: inherit;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: medium;
-    color: black;
+    color: inherit;
+    text-decoration: none;
+}
+
+#contentbar > dl > dd {
+    padding: 10px;
+    margin: 0px;
+    padding-left: 30px;
+}
+
+#contentbar > dl > dd:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+#contentbar > dl > dt {
+    padding: 10px;
+    color: inherit;
+}
+
+#contentbar > dl > dt:hover {
+    background-color: rgb(50, 50, 50);
 }
 
 #content {
@@ -193,8 +208,8 @@ a.navlink:active {
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: xx-large;
-    
-    border: 1px solid maroon;
+
+    border-style: hidden;
 
     opacity: 20%;
 }
