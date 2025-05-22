@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <script src="scripts.js"></script>
     <div id="navbar">
-        <img id="navicon" src = "assets/favicon.ico">
+        <img id="navicon" src = "assets/images/favicon.ico">
         <a class="navlink" href="index.html">Home</a>
         <a class="navlink" href="projects.html">Tech Projects</a>
         <a class="navlink" href="music.html">Music Projects</a>
@@ -126,6 +126,19 @@
                         lamps, and I have connected 16 inputs to display 0-9 and A-F on it with a flick of the lever. The next step, which I am currently working on,
                         is to make a 7 segment display decoder that will display the value in a 4 bit register on the display digit.
                     </p>
+                    <div id="minecraftgallery" class="projgallery">
+                        <div class="galleryframe">
+                            <img id="minecraftimg" class="galleryimg" src="assets/images/minecraft_DFF.png">
+                        </div>
+                        <div class="gallerysel">
+                            <button onclick="prevImage('minecraftimg')">⮜</button>
+                            <button class="defbutton" onclick="selectImage('minecraftimg', 'img0')">⬤</button>
+                            <button onclick="selectImage('minecraftimg', 'img1')">⬤</button>
+                            <button onclick="selectImage('minecraftimg', 'img2')">⬤</button>
+                            <button onclick="selectImage('minecraftimg', 'img3')">⬤</button>
+                            <button onclick="nextImage('minecraftimg')">⮞</button>
+                        </div>
+                    </div>
                 </div>
             </div>
     
@@ -274,10 +287,10 @@
             This website was developed by Grant Sylvester<br>
             It is hosted with GitHub Pages from <a href="https://github.com/grantsylvester/my-web-portfolio">this repository</a><br>
             Grant's GitHub profile is available here: <a href="https://github.com/grantsylvester">
-                <img src="assets/github_icon.png" style="width:14px;height:14px" alt="github icon">
+                <img src="assets/images/github_icon.png" style="width:14px;height:14px" alt="github icon">
             </a><br>
             Grant's LinkedIn is available here: <a href="https://www.linkedin.com/in/gsylvester-engineer/">
-                <img src="assets/linkedin_icon.png" style="width:14px;height:14px;" alt="linkedin icon">
+                <img src="assets/images/linkedin_icon.png" style="width:14px;height:14px;" alt="linkedin icon">
             </a><br>
         </address>
     </footer>
