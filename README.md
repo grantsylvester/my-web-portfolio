@@ -8,18 +8,23 @@ to be a more light-hearted, less professional sounding portfolio.
 
 ## Added
 
-- index.html: website entry point
+- index.html: Website entry point
     - Introduction
     - Profile Photo
     - Interests
     - "Why this page?" section
     - LinkedIn link
-- projects.html: tech projects page
+- projects.html: Tech Projects page
     - Introduction
     - Personal, School and Work Projects section
     - many project descriptions
     - Scroll-to-top button
     - Project entry dropdowns
+- music.html: Music Projects page
+    - Introduction
+    - Music Background section
+    - Arrangements section
+    - a few entries (will add more)
 - Mobile friendly nav bar
 - main.css: style sheet for website
 - images folder: has all images used in website

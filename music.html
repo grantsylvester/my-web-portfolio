@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script src="scripts.js"></script>
+    <div id="navbar">
+        <img id="navicon" src = "assets/favicon.ico">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="projects.html">Tech Projects</a>
+        <a class="navlink" href="music.html">Music Projects</a>
+    </div>
+
+    <div id="projcontainer">
+        <div id="contentbar">
+            <dl>
+                <dt><a href="#projtop">Top</a></dt>
+                <dt><a href="#musicbackground">Music Background</a></dt>
+                <dd><a href="#theory">Theory Background</a></dd>
+                <dd><a href="#bach">Bach Chorale</a></dd>
+                <dt><a href="#arrangements">Arrangements</a></dt>
+                <dd><a href="#apt">APT</a></dd>
+            </dl>
+        </div>
+        <div id="content">
+            <h1 id="projtop" class="header">Music Projects</h1>
+            <p>
+                Welcome to my Music Projects page! This is where I will talk about all of the fun music projects that I have worked on.
+                These projects include all of the arrangements I have made and the one composition that I made for a class (I don't intend
+                on writing any more compositions in the near future).
+            </p>
+            <h2 id="musicbackground">Music Background</h2>
+            <p>
+                This is the section where I will talk about my music background in and out of the classroom. I have done a great deal of 
+                performing in my past and would like to talk about all of it here. I strongly believe that music is one of the best creative
+                outlets an engineer can have, and I am very grateful for all of the opportunities that I have had simply because I learned 
+                how to play the trombone.
+            </p>
+            <div id="theory" class="projentry">
+                <div class="projheadercontainer">
+                    <button onclick="descDropdown('theory')">Hide</button>
+                    <h3 class="projheader">Theory Background</h3>
+                </div>
+                <div class="projentrycontent">
+                    <p>
+                        Music theory is not for the weak. When signing up for Music Theory I at Purdue I was thinking "I've played an instrument
+                        for 10 years of my life, this should be an easy A elective!" I was wrong. Anyway, I took it because I wanted to get better
+                        at writing my own arrangements, and I needed the credit. We learned about everything, from simple rhythm notation to harmonic
+                        triads to the functional harmonic paradigm and root position part writing. The final project for the course was a chorale 
+                        written in the style of Bach, which is my one and only original composition.
+                    </p>
+                    <p>
+                        This class gave me a firm understanding of everything related to 
+                        <span title="Major/minor scale based, used in the common practice era ~1600-1900AD">tonal music</span>, which will be beneficial
+                        to my hobbyist level arranging. I have yet to write any arrangements since finishing the class, but I look forward to it now that 
+                        I am more knowledgeable in at least *some* music theory.
+                    </p>
+                    <p>
+                        No, I will not be taking Music Theory II, as I value my sanity and it is just a hobby.
+                    </p>
+                </div>
+            </div>
+            <div id="bach" class="projentry">
+                <div class="projheadercontainer">
+                    <button onclick="descDropdown('bach')">Hide</button>
+                    <h3 class="projheader">Bach Chorale</h3>
+                </div>
+                <div class="projentrycontent">
+                    <p>
+                        Here is my only composition, the <span title="The bass voice always has the root note of the chord">root position</span> Bach
+                        style chorale discussed in the above theory section. It is written in a <span title="Soprano Alto Tenor Bass">SATB</span> format,
+                        and I am especially proud of the third phrase, where the alto and tenor voices trade this eighth-eighth-quarter rhythm back and
+                        forth while the bass and soprano repeat the same rhythm twice around them. The chorale also makes use of a harmonic progression
+                        called <i>deceptive motion</i>. Basically a <b>V</b> chord strongly wants to resolve to the <b>I</b> chord, because it contains 
+                        the <span title="scale degree 7, one halfstep from the tonic note">leading tone</span> as the third, and it involves a root motion
+                        of a <span title="7 halfsteps, usually the most 'perfect' interval">perfect fifth</span>. Deceptive motion, however, is when the
+                        <b>V</b> chord moves to the <b>vi</b> chord, which usually surprises the listener, as we are so used to the <b>V</b> to <b>I</b>
+                        resolve.
+                    </p>
+                    <audio controls>
+                        <source src="assets/MUS132_Bach_Chorale.mp3" type="audio/mpeg">
+                    Your browser does not support embedded audio.
+                    </audio>
+                    <p>
+                        Unfortunately, I will not publish the actual score, as I am not sure if that will violate the syllabus for an academic integrity
+                        violation. Not sure how many future Theory I students will be digging through this website, but its better safe then sorry.
+                    </p>
+                </div>
+            </div>
+
+            <h2 id="arrangements">Arrangements</h2>
+            <p>
+                This is the section where I will discuss all of my arrangements that I have made or that I am working on. I don't have many yet, but I 
+                plan to make a ton more in the future. I use <a href="https://musescore.org/en">Musescore 4</a> to write all of my arrangements, however 
+                some of my older ones were done in Musescore 3.
+            </p>
+
+            <div id="apt" class="projentry">
+                <div class="projheadercontainer">
+                    <button onclick="descDropdown('apt')">Hide</button>
+                    <h3 class="projheader">"APT" by ROSÉ and Bruno Mars</h3>
+                </div>
+                <div class="projentrycontent">
+                    <p>
+                        Yeah, yeah you probably hate this song. I think its catchy and it got stuck in my head so I made an arrangement of it.
+                        It is the first arrangement I had ever written with more than 4 parts, as it is a trombone ensemble arrangement meant for
+                        8 trombones. It is also the only arrangement of mine that has ever been performed in front of an audience (or played by a 
+                        real ensemble at all for that matter). I wrote it for a talent show fundraiser for a band honor society at Purdue, and it
+                        went very well.
+                    </p>
+                    <p>
+                        You can find it published <a href="https://musescore.com/user/35747140/scores/23836348">here</a> on Musescore.
+                    </p>
+                    <p>
+                        Overall, I am decently proud of this arrangement, but I think there were also many things that I could have done better. I 
+                        was in a bit of a haste to complete it when I wrote the second half of it, so there are some notation errors and the balance
+                        between parts is a little off. I don't think I will revisit this one though, as I have other scores I want to work on.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><footer>
+        <br>
+        <address>
+            This website was developed by Grant Sylvester<br>
+            It is hosted with GitHub Pages from <a href="https://github.com/grantsylvester/my-web-portfolio">this repository</a><br>
+            Grant's GitHub profile is available here: <a href="https://github.com/grantsylvester">
+                <img src="assets/github_icon.png" style="width:14px;height:14px" alt="github icon">
+            </a><br>
+            Grant's LinkedIn is available here: <a href="https://www.linkedin.com/in/gsylvester-engineer/">
+                <img src="assets/linkedin_icon.png" style="width:14px;height:14px;" alt="linkedin icon">
+            </a><br>
+        </address>
+    </footer>
+
+    <button onclick="topFunction()" id="scrbutton"><b>^</b></button>
+</body>
