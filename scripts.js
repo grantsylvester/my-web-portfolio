@@ -4,11 +4,11 @@ const hiddenProjects = [];
 
 const _minecraftImages = {
     "numImages" : 4,
-    "current" : "img1",
-    "img1": "minecraft_DFF",
-    "img2": "minecraft_SR",
-    "img3": "minecraft_7SD_1",
-    "img4": "minecraft_7SD_2"
+    "current" : "img0",
+    "img0": "minecraft_DFF",
+    "img1": "minecraft_SR",
+    "img2": "minecraft_7SD_1",
+    "img3": "minecraft_7SD_2"
 };
 
 const minecraftImages = _minecraftImages;
@@ -51,12 +51,13 @@ function nextImage(id) {
     let image = document.getElementById(id);
     let imgObj = imageMaster[id];
     let numImages = imgObj.numImages;
-    if(imgObj.current != `img${numImages}`) {
-        let next = "img" + String.fromCharCode(imgObj.current.charCodeAt(3) + 1);
+    if(imgObj.current != `img${numImages - 1}`) {
+        let nextNum = String.fromCharCode(imgObj.current.charCodeAt(3) + 1);
+        let next = "img" + nextNum;
         image.src = `assets/images/${imgObj[next]}.png`;
         imgObj.current = next;
     } else {
-        let next = "img1";
+        let next = "img0";
         image.src = `assets/images/${imgObj[next]}.png`;
         imgObj.current = next;
     }
@@ -66,12 +67,13 @@ function prevImage(id) {
     let image = document.getElementById(id);
     let imgObj = imageMaster[id];
     let numImages = imgObj.numImages;
-    if(imgObj.current != "img1") {
-        let next = "img" + String.fromCharCode(imgObj.current.charCodeAt(3) - 1);
+    if(imgObj.current != "img0") {
+        let nextNum = String.fromCharCode(imgObj.current.charCodeAt(3) - 1);
+        let next = "img" + nextNum;
         image.src = `assets/images/${imgObj[next]}.png`;
         imgObj.current = next;
     } else {
-        let next = `img${numImages}`;
+        let next = `img${numImages - 1}`;
         image.src = `assets/images/${imgObj[next]}.png`;
         imgObj.current = next;
     }

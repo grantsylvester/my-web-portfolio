@@ -126,15 +126,17 @@
                         lamps, and I have connected 16 inputs to display 0-9 and A-F on it with a flick of the lever. The next step, which I am currently working on,
                         is to make a 7 segment display decoder that will display the value in a 4 bit register on the display digit.
                     </p>
-                    <div class="projgallery">
-                        <img id="minecraftimg" class="galleryimg" src="assets/images/minecraft_DFF.png">
+                    <div id="minecraftgallery" class="projgallery">
+                        <div class="galleryframe">
+                            <img id="minecraftimg" class="galleryimg" src="assets/images/minecraft_DFF.png">
+                        </div>
                         <div class="gallerysel">
-                            <button onclick="prevImage('minecraftimg')"><</button>
-                            <button onclick="selectImage('minecraftimg', 'img1')">o</button>
-                            <button onclick="selectImage('minecraftimg', 'img2')">o</button>
-                            <button onclick="selectImage('minecraftimg', 'img3')">o</button>
-                            <button onclick="selectImage('minecraftimg', 'img4')">o</button>
-                            <button onclick="nextImage('minecraftimg')">></button>
+                            <button onclick="prevImage('minecraftimg')">⮜</button>
+                            <button class="defbutton" onclick="selectImage('minecraftimg', 'img0')">⬤</button>
+                            <button onclick="selectImage('minecraftimg', 'img1')">⬤</button>
+                            <button onclick="selectImage('minecraftimg', 'img2')">⬤</button>
+                            <button onclick="selectImage('minecraftimg', 'img3')">⬤</button>
+                            <button onclick="nextImage('minecraftimg')">⮞</button>
                         </div>
                     </div>
                 </div>
