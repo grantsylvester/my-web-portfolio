@@ -8,7 +8,11 @@ const _minecraftImages = {
     "img0": "minecraft_DFF",
     "img1": "minecraft_SR",
     "img2": "minecraft_7SD_1",
-    "img3": "minecraft_7SD_2"
+    "img3": "minecraft_7SD_2",
+    "title0": "Digital Flip-Flop",
+    "title1": "Shift Register",
+    "title2": "Seven Segment Display",
+    "title3": "7 Seg Decoding"
 };
 
 const minecraftImages = _minecraftImages;
@@ -54,11 +58,15 @@ function nextImage(id) {
     if(imgObj.current != `img${numImages - 1}`) {
         let nextNum = String.fromCharCode(imgObj.current.charCodeAt(3) + 1);
         let next = "img" + nextNum;
+        let nextTitle = "title" + nextNum;
         image.src = `assets/images/${imgObj[next]}.png`;
+        image.title = imgObj[nextTitle];
         imgObj.current = next;
     } else {
         let next = "img0";
+        let nextTitle = "title0";
         image.src = `assets/images/${imgObj[next]}.png`;
+        image.title = imgObj[nextTitle];
         imgObj.current = next;
     }
 }
