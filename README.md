@@ -13,6 +13,7 @@ to be a more light-hearted, less professional sounding portfolio.
     - Profile Photo
     - Interests
     - "Why this page?" section
+    - AI Policy
     - LinkedIn link
 - projects.html: Tech Projects page
     - Introduction
