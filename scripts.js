@@ -8,14 +8,29 @@ const _minecraftImages = {
     "img0": "minecraft_DFF",
     "img1": "minecraft_SR",
     "img2": "minecraft_7SD_1",
-    "img3": "minecraft_7SD_2"
+    "img3": "minecraft_7SD_2",
+    "title0" : "My design for the digital flip-flop",
+    "title1" : "8 bit register",
+    "title2" : "My 7 segment display face",
+    "title3" : "7 segment display decoding logic",
 };
 
+const _emrickImages = {
+    "numImages" : 2,
+    "current" : "img0",
+    "img0" : "emrick_1",
+    "img1" : "emrick_2",
+    "title0" : "Close-up shot of the lights on a uniform",
+    "title1" : "Photo of the lights on the band at the 2024 Lafayette Christmas Parade"
+}
+
 const minecraftImages = _minecraftImages;
+const emrickImages = _emrickImages;
 
 const _imageMaster = {
     //image id : gallery object
-    "minecraftimg" : minecraftImages
+    "minecraftimg" : minecraftImages,
+    "emrickimg" : emrickImages
 };
 
 const imageMaster = _imageMaster;
@@ -55,10 +70,12 @@ function nextImage(id) {
         let nextNum = String.fromCharCode(imgObj.current.charCodeAt(3) + 1);
         let next = "img" + nextNum;
         image.src = `assets/images/${imgObj[next]}.png`;
+        image.title = imgObj["title" + nextNum];
         imgObj.current = next;
     } else {
         let next = "img0";
         image.src = `assets/images/${imgObj[next]}.png`;
+        image.title = imgObj["title0"];
         imgObj.current = next;
     }
 }
@@ -71,10 +88,12 @@ function prevImage(id) {
         let nextNum = String.fromCharCode(imgObj.current.charCodeAt(3) - 1);
         let next = "img" + nextNum;
         image.src = `assets/images/${imgObj[next]}.png`;
+        image.title = imgObj["title" + nextNum];
         imgObj.current = next;
     } else {
         let next = `img${numImages - 1}`;
         image.src = `assets/images/${imgObj[next]}.png`;
+        image.title = imgObj[`title${numImages - 1}`];
         imgObj.current = next;
     }
 }
@@ -83,5 +102,6 @@ function selectImage(id, dest) {
     let image = document.getElementById(id);
     let imgObj = imageMaster[id];
     image.src = `assets/images/${imgObj[dest]}.png`;
+    image.title = imgObj["title" + dest[3]];
     imgObj.current = dest;
 }
