@@ -76,7 +76,7 @@
                         <a href="https://www.w3schools.com/html/default.asp">W3 School's guide</a>. They have a well structured online reference as
                         well as short quizzes at the end of every chapter, which I found super helpful <small>(and its also <i>free</i>)</small>.
                         GitHub Pages requires that you push changes to main and wait for it to deploy the website again in order to see the results
-                        of your changes. In order to develope the website and see changes immediately, I installed the 
+                        of your changes. In order to develop the website and see changes immediately, I installed the 
                         <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> extension on VSCode, which
                         let me open any HTML file in a local server by simply right clicking it.
                     </p>
@@ -85,15 +85,18 @@
                         Another goal I had for this project was to use it as an opportunity to learn some JavaScript. I have so far accomplished
                         this by adding the scroll-to-top button in the bottom left of your screen as well as the dropdowns buttons at the top
                         of each project entry. Feel free to go to <kbd>right click > inspect element > sources > scripts.js</kbd> to see how I 
-                        accomplished the creation of all of the dropdowns with one function. I'm not sure if its the best way to do it, but it
-                        was my own creative solution and I am proud of it. 
+                        accomplished the creation of all of the dropdowns with one function. Basically I have an array that stores the name of every currently hidden
+                        dropdown, so it starts empty and is filled with project entry names as you hide more entries. Then my function checks if that
+                        description is in that array when you click the button, and if it is, it will show it and remove it from the array, 
+                        otherwise it will hide it and add it to the array. I'm not sure if its the best way to do it, but it
+                        was my own creative solution and I am proud of it.
                     </p>
                     <p>
                         One more thing that I have added to the site is image galleries. As of writing this, I have added one to the <a href="#switch">Switch Dock Modification</a>,
                         <a href="#minecraft">Minecraft Redstone Designs</a> and <a href="#emrick">Project Emrick</a> sections of this page.
-                        These have arrow buttons below that the user can use to switch between the next or previous image in the gallery, or 
-                        circle buttons that the user can use to navigate directly to the image they want to see. They work by referencing and modifying
-                        the <i>&lt;section&gt;Images</i> object at the top to change the image source and image hover title to the desired one. To make the
+                        These have arrow buttons below that the user can use to switch between the next or previous image in the gallery, and 
+                        circle buttons that the user can click to navigate directly to the image they want to see. They work by referencing and modifying
+                        the <i>&lt;section&gt;Images</i> object at the top of scripts.js to change the image source and image hover title to the desired one. To make the
                         functions work for all future galleries, I have created an <i>imageMaster</i> object that contains the gallery objects. This way, all my
                         JS functions need as an argument is the image ID (except for the selectImage function which also requires the specific destination
                         requested by the user's choice of button).
@@ -105,7 +108,7 @@
                     <p>
                         There are currently 3 pages on the website, and I don't plan on adding any more at the moment. First is the homepage which has the
                         short about me paragraph, personal AI use statement, etc. The next page is the Tech Projects page that you are currently reading 
-                        (hello there!). Last but maybe not least depending who you ask is the Music Projects page. I wanted to make my portfolio website stand
+                        (hello there!). Last but maybe not least (depending who you ask) is the Music Projects page. I wanted to make my portfolio website stand
                         out, and I thought there would be no better way to accomplish that than have an entire page dedicated to my main creative outlet, music.
                         You don't have to know anything about music to enjoy it, so I encourage you to go check it out!
                     </p>
@@ -119,8 +122,8 @@
                 </div>
                 <div class="projentrycontent">
                     <p>
-                        This is a project that I have had brewing in my head for a while (2 years lol). I had the idea while working my first internship, right when I was 
-                        getting into embedded systems, but when school and other jobs took up most of my time, I unfortunately stopped working on it. Now I am ready and
+                        This is a project that I have had brewing in my head for a while (2 years lol). I had the idea while working at my first internship, right when I was 
+                        getting into embedded systems, but when school and other jobs started to take up most of my time, I unfortunately put it on hold. Now I am ready and
                         excited to start it up again!
                     </p>
                     <h4>The Idea</h4>
@@ -129,21 +132,23 @@
                         <i>Breath of the Wild</i></span> (BOTW) themed light show when you dock the switch in it. I got inspiration from these cool 
                         <a href="https://www.youtube.com/watch?v=WtL4iKoSow0">wireless chargers</a> I saw online. So imagine that, but on the front of a Nintendo Switch 
                         console dock. This sort of thing is very fitting, as a primary game mechanic of BOTW is the tablet that <span title="the protagonist of the Zelda franchise">
-                        Link</span> carries with him and uses to interract with objects and gain new skills.
+                        Link</span> carries with him and uses to interract with objects and gain new skills. When interracting with these objects they usually do this sort of
+                        flashy pattern, so my hope is that this feels a little bit like bringing part of the game into the real world.
                     </p>
                     <h4>Progress</h4>
                     <p>
                         So far, I have bought an extra dock on Ebay, realized it was in better shape than mine, and dismantled mine instead. The dock has one main PCB, which
                         houses all of the USB and HDMI ports that can be used to connect controllers, monitors, etc. How I plan to trigger the light show is to use the status
-                        light signal that is already present in the dock. The dock has a green light that turns on when the console is on and docked, so this is perfect.
+                        light signal that is already present in the dock. The dock has a green light that turns on when the console is on and docked, so this is perfect for
+                        sensing when I place the switch in the dock.
                     </p>
                     <p>
                         I have also had to dust off my Fusion 360 skills since my internship with Wavelogix (see work projects). I will need to design and print some parts for
                         the modification to look good, including the entire front face of the dock. I have so far modeled the PCB itself, but still need to model the back half
-                        of dock and design the front half, which will house the extra electronics I will be adding.
+                        of dock and design a new front half, which will house the extra electronics I will be adding.
                     </p>
                     <p>
-                        "What extra electronics will you be adding?" you may be asking right now. I currently plan on using a <a href="https://wiki.seeedstudio.com/Seeeduino-XIAO/">
+                        "What extra electronics will you be adding?" you ask?. I currently plan on using a <a href="https://wiki.seeedstudio.com/Seeeduino-XIAO/">
                         Seeed Studio Xiao</a> microcontroller. It is ideal for this application due to its incredibly small size and low number of pins, as I won't require that many.
                         Other than that, I still need to select a good LED to use for the display, but that shouldn't be too hard.
                     </p>
@@ -174,9 +179,10 @@
                     </p>
                     <p>
                         Growing up, this always seemed too hard to figure out, so I just played the game like a normal person instead of learning digital
-                        system design as a 10 year old <small>(biggest mistake of my life if you ask me)</small>. Now, however, I am <i>unemployed</i> and
+                        system design as a 10 year old <small>(biggest mistake of my life if you ask me)</small>. Now, however, I have a bit more free time and
                         have learned how things like Systemverilog and RTL design work, so I thought I would give it a shot.
                     </p>
+                    <h4>Logic Gates</h4>
                     <p>
                         The first thing that I did was learn some basic logic gates. These are not too hard, and usually only take up 2-blocks of space.
                         The hardest part of redstone is the fact that if you place dust (wire) next to more dust, it <b>WILL</b> connect, so you really have to
@@ -191,7 +197,7 @@
                     </p>
                     <h4>8-Bit Register</h4>
                     <p>
-                        After storing one bit, I thought I would store 8. Now, however, I ditched my primitive, gate-level flip-flop and found an online example
+                        After storing one bit, I thought,"why not store 8?". Now, however, I ditched my primitive, gate-level flip-flop and found an online example
                         of a compact and stackable one. These work by using <span title="Transfers an item to its destination upon receiving high signal">hoppers</span>
                         with outputs connected in a feedback loop. A <span title="can detect if the nearby hopper contains an item">redstone comparator</span> checks
                         if the hopper on the outside contains an item (1) or if it is empty (0). With clever block placement, you can make it so that the hoppers only
@@ -236,7 +242,7 @@
                     <p>
                         One of the coolest projects to have been a part of at Purdue was Project Emrick. This project is the redesign of the Purdue "All-American" Marching
                         Band's uniform lights. These lights are capable of being programmed with lightshows (similar to a drone show, but on a marching band!) for halftime
-                        shows at nightgames and nighttime parades alike. As a part of the software team, I helped program the devices. One specific thing that I contributed
+                        shows at night games and nighttime parades alike. As a part of the software team, I helped program the devices. One specific thing that I contributed
                         was the code for the status light on the top of each unit, that lets the user know if it is on, off, connecting to WiFi, low on battery, etc. The 
                         project had its debut with the band's <a href="https://www.youtube.com/watch?v=GNstIQ6atBE">"Disney 101" halftime show</a> when Purdue played Oregon 
                         and definitely put up a fight (L 0-35). Other contributions that I had were related to the assembly of the devices, which were comprised of an ESP32
@@ -268,8 +274,8 @@
                     <p>
                         The ASIC design lab class I took was one of the most challenging but also rewarding classes I have ever taken. Did
                         it suck all of the free time out of my life? Yes. But the feeling of making a really good Systemverilog testbench
-                        to test a module that you created with a very thorough and detailed RTL diagram and see it all work (after debugging
-                        of course) really made it feel worth it. That or its Stockholm syndrome take your pick
+                        to test a module that you created with a very thorough and detailed RTL diagram and see it all work really makes it 
+                        feel worth it. That or it's Stockholm syndrome, take your pick.
                     </p>
                     <p>
                         The final project for this course was a collaborative project where I teamed up with two other students and designed
@@ -283,15 +289,15 @@
                         In the end, my subordinate device was able to transfer data to and from the USB transceiver, and the USB data was stored in
                         a FIFO data buffer that could only communicate 1 byte to/from my device per cycle. I had to design a finite state machine 
                         to handle reads/writes of greater than 1 byte from the buffer. My initial solution was to try to stall the address phase
-                        of the transaction (hready low), load the bytes into an intermediate register, then allow the data phase to happen once the 
+                        of the transaction (bring hready low immediately), load the bytes into an intermediate register, then allow the data phase to happen once the 
                         data was available on hrdata. Unfortunately, this method contains an oversight in that I couldn't (reliably) pull hready low
                         before the data phase. I had to stall the data phase, and due to the pipelined nature of AHB, that meant that I needed to register
-                        the old address, size, etc of the transaction because they are replaced by the information of the next transaction. So, I did 
-                        just that. I registered the inputs, and if the address of a transaction indicated that it was a buffer operation, my device would
-                        use those registered inputs rather than the current one.
+                        the old address, size, etc of the transaction because they are replaced by the information of the next transaction when the data phase begins.
+                        So, I did just that. I registered the inputs, and if the address of a transaction indicated that it was a buffer operation, my device would
+                        use those registered inputs rather than the current inputs to perform the buffer operation.
                     </p>
                     <p>
-                        What this project did for me was demystify the process of how computers are designed. Its always very easy to assume that its
+                        What this class/project did for me was demystify the process of how computers are designed. Its always very easy to assume that its
                         magic performed by someone smarter than you, but understanding even a smaller ASIC like this at the register level makes the
                         whole ordeal seem more acheivable.
                     </p>
@@ -330,13 +336,14 @@
                         system for virtual memory, the user environments (processes), preemptive multitasking, and file system.
                     </p>
                     <p>
-                        JOS is coded in C, and used the <a href="https://www.qemu.org/">QEMU</a> virtual machine to run the OS on a virtual x86
+                        JOS is coded in C, and uses the <a href="https://www.qemu.org/">QEMU</a> virtual machine to run the OS on a virtual x86
                         architecture. This means that the project required a strong understanding of data structures in C, as well as a firm comprehension of 
                         assembly programming.
                     </p>
                     <p>
                         The project was as challenging as it sounds, but I left my Operating Systems class with an understanding of how computers manage many 
-                        proccesses at once, how they handle memory, and how file systems work.
+                        proccesses at once, how they handle memory, and how file systems work. I expect this knowledge to be very useful if I have a future in
+                        embedded systems.
                     </p>
                 </div>
             </div>
@@ -356,7 +363,7 @@
                     <p>
                         At my first internship with <a href="https://wavelogix.tech/">Wavelogix</a>, my main project was to create a "Multi-Box" that could
                         operate up to 12 of the company's innovative concrete strength sensors at once in a lab testing scenario. This was my first
-                        step into the world of embedded systems, and I am still grateful for what I learned from it. It was this project that had me design
+                        step into the world of embedded systems, and I am very grateful for what I learned from it. It was this project that had me design
                         and solder my first ever PCB using KiCad. I also learned 3D modeling and printing from this job, which is a skill that I am excited
                         to utilize more in the future. The device utilized <a href="https://www.freertos.org/">FreeRTOS</a> on an 
                         <a href="https://www.espressif.com/en/products/socs/esp32">ESP32</a> microcontroller. In operation, it would first connect to WiFi
@@ -376,13 +383,13 @@
                         In the summer of 2024 I interned with <a href="https://reliablemicrosystems.com/">Reliable Microsystems</a>. At Rel-Micro,
                         I was a part of the PCB design team, whose job was to create the large circuit boards that the company uses to test its 
                         radiation hardened ASICs in lab scenarios. While there, I participated in the design of 2 such PCBs, from start to finish.
-                        I made diagrams to map out the signals on the die pad of the chip, as well as documented all of my changes for future reference.
+                        I made diagrams to map out the signals on the die pad of the chip, and documented all of my changes for future reference.
                         Along with my team, we participated in multiple quality review meetings with the higher-ups of the company to ensure the PCB had
-                        no issues and minimal hazards such as parasitic capacitance/inductance, as these can be detrimental in a radiation testing environment.
+                        no issues. We also minimized hazards such as parasitic capacitance/inductance, as these can be detrimental in a radiation testing environment.
                     </p>
                     <p>
                         After completing this job, I feel like I am industry ready in terms of PCB design skills. I know KiCad like the back of my hand
-                        now, and am certain that I could pick up any other PCB software very quick thanks to my experience at Rel-Micro. Another software 
+                        now, and I am certain that I could pick up any other PCB software very quickly thanks to my experience at Rel-Micro. Another software 
                         that I was introduced to at Rel-Micro was 
                         <a href="https://www.cadence.com/en_US/home/tools/custom-ic-analog-rf-design/layout-design/virtuoso-layout-suite.html">Cadence Virtuoso</a> 
                         IC design software. While none of the large projects I worked on there involved Cadence, I was exposed to the software and got to
