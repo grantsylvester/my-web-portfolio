@@ -69,11 +69,13 @@ function nextImage(id) {
     if(imgObj.current != `img${numImages - 1}`) {
         let nextNum = String.fromCharCode(imgObj.current.charCodeAt(3) + 1);
         let next = "img" + nextNum;
+        let nextTitle = "title" + nextNum;
         image.src = `assets/images/${imgObj[next]}.png`;
         image.title = imgObj["title" + nextNum];
         imgObj.current = next;
     } else {
         let next = "img0";
+        let nextTitle = "title0";
         image.src = `assets/images/${imgObj[next]}.png`;
         image.title = imgObj["title0"];
         imgObj.current = next;
