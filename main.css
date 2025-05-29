@@ -6,7 +6,7 @@ body {
     margin: 0;
 }
 
-p {
+p, ul {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: inherit;
 }
