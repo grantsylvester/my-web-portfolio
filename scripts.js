@@ -2,6 +2,15 @@ const hiddenProjects = [];
 
 //Image Gallery Objects
 
+const _switchImages = {
+    "numImages" : 2,
+    "current" : "img0",
+    "img0" : "switch_dock_pcb",
+    "img1" : "switch_dock_pcb_cad",
+    "title0" : "The Switch dock's internal PCB",
+    "title1" : "My 3D Model of the dock PCB"
+}
+
 const _minecraftImages = {
     "numImages" : 4,
     "current" : "img0",
@@ -24,11 +33,13 @@ const _emrickImages = {
     "title1" : "Photo of the lights on the band at the 2024 Lafayette Christmas Parade"
 }
 
+const switchImages = _switchImages;
 const minecraftImages = _minecraftImages;
 const emrickImages = _emrickImages;
 
 const _imageMaster = {
     //image id : gallery object
+    "switchimg" : switchImages,
     "minecraftimg" : minecraftImages,
     "emrickimg" : emrickImages
 };

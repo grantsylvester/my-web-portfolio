@@ -89,7 +89,7 @@
                         was my own creative solution and I am proud of it. 
                     </p>
                     <p>
-                        One more thing that I have added to the site is image galleries. As of writing this, I have added one to the 
+                        One more thing that I have added to the site is image galleries. As of writing this, I have added one to the <a href="#switch">Switch Dock Modification</a>,
                         <a href="#minecraft">Minecraft Redstone Designs</a> and <a href="#emrick">Project Emrick</a> sections of this page.
                         These have arrow buttons below that the user can use to switch between the next or previous image in the gallery, or 
                         circle buttons that the user can use to navigate directly to the image they want to see. They work by referencing and modifying
@@ -147,6 +147,17 @@
                         Seeed Studio Xiao</a> microcontroller. It is ideal for this application due to its incredibly small size and low number of pins, as I won't require that many.
                         Other than that, I still need to select a good LED to use for the display, but that shouldn't be too hard.
                     </p>
+                    <div id="switchgallery" class="projgallery">
+                        <div class="galleryframe">
+                            <img id="switchimg" class="galleryimg" src="assets/images/switch_dock_pcb.png" title="The Switch dock's internal PCB">
+                        </div>
+                        <div class="gallerysel">
+                            <button onclick="prevImage('switchimg')">⮜</button>
+                            <button class="defbutton" onclick="selectImage('switchimg', 'img0')">⬤</button>
+                            <button onclick="selectImage('switchimg', 'img1')">⬤</button>
+                            <button onclick="nextImage('switchimg')">⮞</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
