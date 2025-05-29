@@ -14,7 +14,7 @@ to be a more light-hearted, less professional sounding portfolio.
     - Interests
     - "Why this page?" section
     - AI Policy
-    - LinkedIn link
+    - footer
 - projects.html: Tech Projects page
     - Introduction
     - Personal, School and Work Projects section

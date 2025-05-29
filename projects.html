@@ -20,11 +20,13 @@
             <a href="#projtop">Top</a>
             <a href="#personal">Personal Projects</a>
             <a class="sublink" href="#thisweb">This Website</a>
-            <a class="sublink" href="#minecraft">Minecraft Redstone Tomfoolery</a>
+            <a class="sublink" href="#switch">Switch Dock Modification</a>
+            <a class="sublink" href="#minecraft">Minecraft Redstone Designs</a>
             <a href="#school">School Projects</a>
             <a class="sublink" href="#emrick">Project Emrick</a>
             <a class="sublink" href="#USBTrans">USB Transceiver</a>
             <a class="sublink" href="#smarthome">Smart Home System</a>
+            <a class="sublink" href="#jos">JOS Project</a>
             <a href="#work">Work Projects</a>
             <a class="sublink" href="#multibox">Multi-Box V2</a>
             <a class="sublink" href="#relmicro">Radiation Effects Testing PCBs</a>
@@ -34,6 +36,15 @@
             <p>
                 Welcome to my projects page! This is where I will outline any of my fun projects that I have completed or am currently 
                 working on.
+            </p>
+            <p>
+                On the left is a selection menu of all of my projects. As of now (5/28/2025), the projects that I am actively working on are:
+                <ul>
+                    <li>This Website (Personal)</li>
+                    <li>Switch Dock Modification (Personal)</li>
+                    <li>Minecraft Redstone Designs (Personal)</li>
+                    <li>Project Emrick (School)</li>
+                </ul>
             </p>
             <h2 id="personal" class="header">Personal Projects</h2>
             <p>
@@ -50,13 +61,14 @@
                 <div class="projentrycontent">
                     <p>
                         The first personal project I would like to cover is this website that you yourself are currently browsing! I decided to
-                        make this website for several reasons. First, I wanted to learn HTML, CSS and Javascript in case I ever end up needing
+                        make this website for several reasons. First, I wanted to learn HTML, CSS and JavaScript in case I ever end up needing
                         to design or at least understand a website or web application in my future. 
                     </p>
                     <p>
                         Since I was interested in learning how to make a website, I decided that it would also be a cool way to make a project
                         portfolio where I can yap about all of my interests. And here we are!
                     </p>
+                    <h4>How did I make this website?</h4>
                     <p>
                         I made this website with GitHub Pages <small>(its <i>free</i>)</small>. To learn how to host a website from GitHub,
                         I followed <a href="https://github.com/skills/github-pages">GitHub's tutorial</a> and made a test website. This is not
@@ -68,24 +80,79 @@
                         <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> extension on VSCode, which
                         let me open any HTML file in a local server by simply right clicking it.
                     </p>
+                    <h4>Learning JavaScript</h4>
                     <p>
-                        Another goal I had for this project was to use it as an opportunity to learn some Javascript. I have so far accomplished
-                        this by adding the scroll to top button in the bottom left of your screen as well as the dropdowns buttons at the top
+                        Another goal I had for this project was to use it as an opportunity to learn some JavaScript. I have so far accomplished
+                        this by adding the scroll-to-top button in the bottom left of your screen as well as the dropdowns buttons at the top
                         of each project entry. Feel free to go to <kbd>right click > inspect element > sources > scripts.js</kbd> to see how I 
                         accomplished the creation of all of the dropdowns with one function. I'm not sure if its the best way to do it, but it
-                        was my own creative solution and I am proud of it.
+                        was my own creative solution and I am proud of it. 
                     </p>
                     <p>
-                        Of course, I am not done developing this website, and I intend to learn how to make some smooth transitions next. I also plan
-                        on adding a Music projects page to cover that part of my life as well (the button is there but it just goes to the homepage).
-                        I also want to make a template for an image gallery for each of the projects on this page.
+                        One more thing that I have added to the site is image galleries. As of writing this, I have added one to the 
+                        <a href="#minecraft">Minecraft Redstone Designs</a> and <a href="#emrick">Project Emrick</a> sections of this page.
+                        These have arrow buttons below that the user can use to switch between the next or previous image in the gallery, or 
+                        circle buttons that the user can use to navigate directly to the image they want to see. They work by referencing and modifying
+                        the <i>section</i>Images object at the top to change the image source and image hover title to the desired one. To make the
+                        functions work for all future galleries, I have created an imageMaster object that contains the gallery objects. This way, all my
+                        JS functions need as an argument is the image ID (except for the selectImage function which also requires the specific destination
+                        requested by the user's choice of button).
+                    </p>
+                    <p>
+                        Of course, I am not done developing this website, and I intend to learn how to make some smooth transitions next.
+                    </p>
+                    <h4>Pages</h4>
+                    <p>
+                        There are currently 3 pages on the website, and I don't plan on adding any more at the moment. First is the homepage which has the
+                        short about me paragraph, personal AI use statement, etc. The next page is the Tech Projects page that you are currently reading 
+                        (hello there!). Last but maybe not least depending who you ask is the Music Projects page. I wanted to make my portfolio website stand
+                        out, and I thought there would be no better way to accomplish that than have an entire page dedicated to my main creative outlet, music.
+                        You don't have to know anything about music to enjoy it, so I encourage you to go check it out!
                     </p>
                 </div>
             </div>
+            
+            <div id="switch" class="projentry">
+                <div class="projheadercontainer">
+                    <button onclick="descDropdown('switch')">Hide</button>
+                    <h3 class="projheader">Switch Dock Modification</h3>
+                </div>
+                <div class="projentrycontent">
+                    <p>
+                        This is a project that I have had brewing in my head for a while (2 years lol). I had the idea while working my first internship, right when I was 
+                        getting into embedded systems, but when school and other jobs took up most of my time, I unfortunately stopped working on it.
+                    </p>
+                    <h4>The Idea</h4>
+                    <p>
+                        Basically, I want to modify a Nintendo Switch Dock to do a pretty <span title="2017 installment of Nintendo's The Legend of Zelda franchise">
+                        <i>Breath of the Wild</i></span> (BOTW) themed light show when you dock the switch in it. I got inspiration from these cool 
+                        <a href="https://www.youtube.com/watch?v=WtL4iKoSow0">wireless chargers</a> I saw online. So imagine that, but on the front of a Nintendo Switch 
+                        console dock. This sort of thing is very fitting, as a primary game mechanic of BOTW is the tablet that Link carries with him and uses to interract 
+                        with objects and gain new skills.
+                    </p>
+                    <h4>Progress</h4>
+                    <p>
+                        So far, I have bought an extra dock on Ebay, realized it was in better shape than mine, and dismantled mine instead. The dock has one main PCB, which
+                        houses all of the USB and HDMI ports that can be used to connect controllers, monitors, etc. How I plan to trigger the light show is to use the status
+                        light signal that is already present in the dock. The dock has a green light that turns on when the console is on and docked, so this is perfect.
+                    </p>
+                    <p>
+                        I have also had to dust off my Fusion 360 skills since my internship with Wavelogix (see work projects). I will need to design and print some parts for
+                        the modification to look good, including the entire front face of the dock. I have so far modeled the PCB itself, but still need to model the back half
+                        of dock and design the front half, which will house the extra electronics I will be adding.
+                    </p>
+                    <p>
+                        "What extra electronics will you be adding?" you may be asking right now. I currently plan on using a <a href="https://wiki.seeedstudio.com/Seeeduino-XIAO/">
+                        Seeed Studio Xiao</a> microcontroller. It is ideal for this application due to its incredibly small size and low number of pins, as I won't require that many.
+                        Other than that, I still need to select a good LED to use for the display, but that shouldn't be too hard.
+                    </p>
+                </div>
+            </div>
+
             <div id="minecraft" class="projentry">
                 <div class="projheadercontainer">
                     <button onclick="descDropdown('minecraft')">Hide</button>
-                    <h3 class="projheader">Minecraft Redstone Tomfoolery</h3>
+                    <h3 class="projheader">Minecraft Redstone Designs</h3>
                 </div>
                 <div class="projentrycontent">
                     <p>
@@ -234,6 +301,30 @@
                         temperature was higher than the target temperature (specified by the user with the keypad), the motor would turn on, as you would
                         expect an automatic AC to work. Lastly, we used an SPI-enabled LCD display to display the alarm state, current temperature, and 
                         target temperature to the user.
+                    </p>
+                </div>
+            </div>
+
+            <div id="jos" class="projentry">
+                <div class="projheadercontainer">
+                    <button onclick="descDropdown('jos')">Hide</button>
+                    <h3 class="projheader">JOS Project</h3>
+                </div>
+                <div class="projentrycontent">
+                    <p>
+                        In case you are unfamiliar, the JOS project is a popular way to teach operating systems at universities. Developed at MIT (I think),
+                        it gives the student a skeleton of an OS that, through the course of the semester, they implement many of the fundamental properties of 
+                        a modern operating system. For me, the project was split into 5 labs, in which my lab partner and I set up the bootloader, the paging
+                        system for virtual memory, the user environments (processes), preemptive multitasking, and file system.
+                    </p>
+                    <p>
+                        JOS is coded in C, and used the <a href="https://www.qemu.org/">QEMU</a> virtual machine to run the OS on a virtual x86
+                        architecture. This means that the project required a strong understanding of data structures in C, as well as a firm comprehension of 
+                        assembly programming.
+                    </p>
+                    <p>
+                        The project was as challenging as it sounds, but I left my Operating Systems class with an understanding of how computers manage many 
+                        proccesses at once, how they handle memory, and how file systems work.
                     </p>
                 </div>
             </div>
