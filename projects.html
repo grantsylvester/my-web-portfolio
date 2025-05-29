@@ -89,12 +89,12 @@
                         was my own creative solution and I am proud of it. 
                     </p>
                     <p>
-                        One more thing that I have added to the site is image galleries. As of writing this, I have added one to the 
+                        One more thing that I have added to the site is image galleries. As of writing this, I have added one to the <a href="#switch">Switch Dock Modification</a>,
                         <a href="#minecraft">Minecraft Redstone Designs</a> and <a href="#emrick">Project Emrick</a> sections of this page.
                         These have arrow buttons below that the user can use to switch between the next or previous image in the gallery, or 
                         circle buttons that the user can use to navigate directly to the image they want to see. They work by referencing and modifying
-                        the <i>section</i>Images object at the top to change the image source and image hover title to the desired one. To make the
-                        functions work for all future galleries, I have created an imageMaster object that contains the gallery objects. This way, all my
+                        the <i>&lt;section&gt;Images</i> object at the top to change the image source and image hover title to the desired one. To make the
+                        functions work for all future galleries, I have created an <i>imageMaster</i> object that contains the gallery objects. This way, all my
                         JS functions need as an argument is the image ID (except for the selectImage function which also requires the specific destination
                         requested by the user's choice of button).
                     </p>
@@ -120,15 +120,16 @@
                 <div class="projentrycontent">
                     <p>
                         This is a project that I have had brewing in my head for a while (2 years lol). I had the idea while working my first internship, right when I was 
-                        getting into embedded systems, but when school and other jobs took up most of my time, I unfortunately stopped working on it.
+                        getting into embedded systems, but when school and other jobs took up most of my time, I unfortunately stopped working on it. Now I am ready and
+                        excited to start it up again!
                     </p>
                     <h4>The Idea</h4>
                     <p>
                         Basically, I want to modify a Nintendo Switch Dock to do a pretty <span title="2017 installment of Nintendo's The Legend of Zelda franchise">
                         <i>Breath of the Wild</i></span> (BOTW) themed light show when you dock the switch in it. I got inspiration from these cool 
                         <a href="https://www.youtube.com/watch?v=WtL4iKoSow0">wireless chargers</a> I saw online. So imagine that, but on the front of a Nintendo Switch 
-                        console dock. This sort of thing is very fitting, as a primary game mechanic of BOTW is the tablet that Link carries with him and uses to interract 
-                        with objects and gain new skills.
+                        console dock. This sort of thing is very fitting, as a primary game mechanic of BOTW is the tablet that <span title="the protagonist of the Zelda franchise">
+                        Link</span> carries with him and uses to interract with objects and gain new skills.
                     </p>
                     <h4>Progress</h4>
                     <p>
@@ -146,6 +147,17 @@
                         Seeed Studio Xiao</a> microcontroller. It is ideal for this application due to its incredibly small size and low number of pins, as I won't require that many.
                         Other than that, I still need to select a good LED to use for the display, but that shouldn't be too hard.
                     </p>
+                    <div id="switchgallery" class="projgallery">
+                        <div class="galleryframe">
+                            <img id="switchimg" class="galleryimg" src="assets/images/switch_dock_pcb.png" title="The Switch dock's internal PCB">
+                        </div>
+                        <div class="gallerysel">
+                            <button onclick="prevImage('switchimg')">⮜</button>
+                            <button class="defbutton" onclick="selectImage('switchimg', 'img0')">⬤</button>
+                            <button onclick="selectImage('switchimg', 'img1')">⬤</button>
+                            <button onclick="nextImage('switchimg')">⮞</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
