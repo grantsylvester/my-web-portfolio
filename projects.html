@@ -144,13 +144,23 @@
                     </p>
                     <p>
                         I have also had to dust off my Fusion 360 skills since my internship with Wavelogix (see work projects). I will need to design and print some parts for
-                        the modification to look good, including the entire front face of the dock. I have so far modeled the PCB itself, but still need to model the back half
-                        of dock and design a new front half, which will house the extra electronics I will be adding.
+                        the modification to look good, including the entire front face of the dock. I have so far modeled the PCB and the parts that will directly connect to the
+                        new front panel, but still need to design the new front panel (where the lights will be). This new design for the front panel will have a bit of extra
+                        space to house the extra electronics for the device.
                     </p>
                     <p>
                         "What extra electronics will you be adding?" you ask?. I currently plan on using a <a href="https://wiki.seeedstudio.com/Seeeduino-XIAO/" target="_blank">
                         Seeed Studio Xiao</a> microcontroller. It is ideal for this application due to its incredibly small size and low number of pins, as I won't require that many.
-                        Other than that, I still need to select a good LED to use for the display, but that shouldn't be too hard.
+                        I have also settled on the <a href="https://www.adafruit.com/product/5225?srsltid=AfmBOoq5JwicOWbW5yAKwnle71GuFnOPdFDMgC6fJ7cqYhb3uehO2C3v" target="_blank">Adafruit Neopixel Dot Strand</a>
+                        for my LEDs. This flexible strand allows me to orient the lights however I want while not requiring me to solder each LED into the device. I have soldered NeoPixels
+                        before and it is pretty difficult to do so cleanly.
+                    </p>
+                    <p>
+                        On the coding front, I have gotten some basic animations working, like a color chase, a flash, and a color wipe. I still need to write some functions for a smooth
+                        fade in/out, which will make the animation much more realistic. Below in the gallery you can find a simple breadboard setup and my to-scale LED position map. My vision
+                        for the full animation is for it to smoothly flash orange, then the middle eye (LEDs 12-19) stays orange while a blue light chases around the outer circle (LEDs 0-11)
+                        twice. You can see a snapshot of this part of the animation in the image below. After the second circle, the lights will fade out, then all 20 pixels will do a bright
+                        blue smooth flash, like a whoosh signifying that the device was "unlocked".
                     </p>
                     <div id="switchgallery" class="projgallery">
                         <div class="galleryframe">
@@ -160,6 +170,8 @@
                             <button onclick="prevImage('switchimg')">⮜</button>
                             <button class="defbutton" onclick="selectImage('switchimg', 'img0')">⬤</button>
                             <button onclick="selectImage('switchimg', 'img1')">⬤</button>
+                            <button onclick="selectImage('switchimg', 'img2')">⬤</button>
+                            <button onclick="selectImage('switchimg', 'img3')">⬤</button>
                             <button onclick="nextImage('switchimg')">⮞</button>
                         </div>
                     </div>
