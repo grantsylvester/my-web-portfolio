@@ -3,12 +3,16 @@ const hiddenProjects = [];
 //Image Gallery Objects
 
 const _switchImages = {
-    "numImages" : 2,
+    "numImages" : 4,
     "current" : "img0",
     "img0" : "switch_dock_pcb",
     "img1" : "switch_dock_pcb_cad",
+    "img2" : "switch_dock_interior_front_cad",
+    "img3" : "switch_dock_LED_demo",
     "title0" : "The Switch dock's internal PCB",
-    "title1" : "My 3D Model of the dock PCB"
+    "title1" : "My 3D Model of the dock PCB",
+    "title2" : "3D model of the interior portion of the front of the switch dock",
+    "title3" : "NeoPixel LED breadboard setup and demonstration"
 }
 
 const _minecraftImages = {
