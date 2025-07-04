@@ -167,12 +167,14 @@
                             <img id="switchimg" class="galleryimg" src="assets/images/switch_dock_pcb.png" title="The Switch dock's internal PCB">
                         </div>
                         <div class="gallerysel">
-                            <button onclick="prevImage('switchimg')">⮜</button>
-                            <button class="defbutton" onclick="selectImage('switchimg', 'img0')">⬤</button>
-                            <button onclick="selectImage('switchimg', 'img1')">⬤</button>
-                            <button onclick="selectImage('switchimg', 'img2')">⬤</button>
-                            <button onclick="selectImage('switchimg', 'img3')">⬤</button>
-                            <button onclick="nextImage('switchimg')">⮞</button>
+                            <button onclick="prevImage('switchimg', 'switchbuttons')">⮜</button>
+                            <div id="switchbuttons">
+                                <button class="defbutton" onclick="selectImage('switchimg', 'switchbuttons', 'img0')">⬤</button>
+                                <button onclick="selectImage('switchimg', 'switchbuttons', 'img1')">⬤</button>
+                                <button onclick="selectImage('switchimg', 'switchbuttons', 'img2')">⬤</button>
+                                <button onclick="selectImage('switchimg', 'switchbuttons', 'img3')">⬤</button>
+                            </div>
+                            <button onclick="nextImage('switchimg', 'switchbuttons')">⮞</button>
                         </div>
                     </div>
                 </div>
@@ -227,12 +229,14 @@
                             <img id="minecraftimg" class="galleryimg" src="assets/images/minecraft_DFF.png" title="My design for the digital flip-flop">
                         </div>
                         <div class="gallerysel">
-                            <button onclick="prevImage('minecraftimg')">⮜</button>
-                            <button class="defbutton" onclick="selectImage('minecraftimg', 'img0')">⬤</button>
-                            <button onclick="selectImage('minecraftimg', 'img1')">⬤</button>
-                            <button onclick="selectImage('minecraftimg', 'img2')">⬤</button>
-                            <button onclick="selectImage('minecraftimg', 'img3')">⬤</button>
-                            <button onclick="nextImage('minecraftimg')">⮞</button>
+                            <button onclick="prevImage('minecraftimg', 'minecraftbuttons')">⮜</button>
+                            <div id='minecraftbuttons'>
+                                <button class="defbutton" onclick="selectImage('minecraftimg', 'minecraftbuttons', 'img0')">⬤</button>
+                                <button onclick="selectImage('minecraftimg', 'minecraftbuttons', 'img1')">⬤</button>
+                                <button onclick="selectImage('minecraftimg', 'minecraftbuttons', 'img2')">⬤</button>
+                                <button onclick="selectImage('minecraftimg', 'minecraftbuttons', 'img3')">⬤</button>
+                            </div>
+                            <button onclick="nextImage('minecraftimg', 'minecraftbuttons')">⮞</button>
                         </div>
                     </div>
                 </div>
@@ -268,10 +272,12 @@
                             <img id="emrickimg" class="galleryimg" src="assets/images/emrick_1.png" title="Close-up shot of the lights on a uniform">
                         </div>
                         <div class="gallerysel">
-                            <button onclick="prevImage('emrickimg')">⮜</button>
-                            <button class="defbutton" onclick="selectImage('emrickimg', 'img0')">⬤</button>
-                            <button onclick="selectImage('emrickimg', 'img1')">⬤</button>
-                            <button onclick="nextImage('emrickimg')">⮞</button>
+                            <button onclick="prevImage('emrickimg', 'emrickbuttons')">⮜</button>
+                            <div id="emrickbuttons">
+                                <button class="defbutton" onclick="selectImage('emrickimg', 'emrickbuttons', 'img0')">⬤</button>
+                                <button onclick="selectImage('emrickimg', 'emrickbuttons', 'img1')">⬤</button>
+                            </div>
+                            <button onclick="nextImage('emrickimg', 'emrickbuttons')">⮞</button>
                         </div>
                     </div>
                 </div>
