@@ -21,7 +21,7 @@ to be a more light-hearted, less professional sounding portfolio.
     - many project descriptions
     - Scroll-to-top button
     - Project entry dropdowns
-    - image galleries
+    - image galleries, with color changing buttons
 - music.html: Music Projects page
     - Introduction
     - Music Background section

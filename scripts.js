@@ -77,48 +77,81 @@ function topFunction() {
 }
 
 //Image Galleries
-function nextImage(id) {
-    let image = document.getElementById(id);
-    let imgObj = imageMaster[id];
+function nextImage(imgid, buttonid) {
+    let image = document.getElementById(imgid);
+    let imgObj = imageMaster[imgid];
     let numImages = imgObj.numImages;
-    if(imgObj.current != `img${numImages - 1}`) {
+    let buttons = document.getElementById(buttonid).getElementsByTagName("button"); //array of the buttons
+    
+    if(imgObj.current != `img${numImages - 1}`) { //no loop back
+        //Change Image
         let nextNum = String.fromCharCode(imgObj.current.charCodeAt(3) + 1);
         let next = "img" + nextNum;
         let nextTitle = "title" + nextNum;
         image.src = `assets/images/${imgObj[next]}.png`;
         image.title = imgObj["title" + nextNum];
         imgObj.current = next;
-    } else {
+
+        //Update Button Colors
+        buttons[nextNum].style.color = 'black';
+        buttons[nextNum - 1].style.color = 'rgb(149, 113, 23)';
+    } else { //loop back
+        //Change Image
         let next = "img0";
         let nextTitle = "title0";
         image.src = `assets/images/${imgObj[next]}.png`;
         image.title = imgObj["title0"];
         imgObj.current = next;
+
+        //Update Button Colors
+        buttons[0].style.color = 'black';
+        buttons[numImages - 1].style.color = 'rgb(149, 113, 23)';
     }
 }
 
-function prevImage(id) {
-    let image = document.getElementById(id);
-    let imgObj = imageMaster[id];
+function prevImage(imgid, buttonid) {
+    let image = document.getElementById(imgid);
+    let imgObj = imageMaster[imgid];
     let numImages = imgObj.numImages;
-    if(imgObj.current != "img0") {
+    let buttons = document.getElementById(buttonid).getElementsByTagName("button"); //array of the buttons
+
+    if(imgObj.current != "img0") { //no loop back
+        //Change Image
         let nextNum = String.fromCharCode(imgObj.current.charCodeAt(3) - 1);
         let next = "img" + nextNum;
         image.src = `assets/images/${imgObj[next]}.png`;
         image.title = imgObj["title" + nextNum];
         imgObj.current = next;
-    } else {
+
+        //Update Button Colors
+        buttons[nextNum].style.color = 'black';
+        buttons[parseInt(nextNum) + 1].style.color = 'rgb(149, 113, 23)';
+    } else { //loop back
+        //Change Image
         let next = `img${numImages - 1}`;
         image.src = `assets/images/${imgObj[next]}.png`;
         image.title = imgObj[`title${numImages - 1}`];
         imgObj.current = next;
+
+        //Update Button Colors
+        buttons[numImages - 1].style.color = 'black';
+        buttons[0].style.color = 'rgb(149, 113, 23)';
     }
 }
 
-function selectImage(id, dest) {
-    let image = document.getElementById(id);
-    let imgObj = imageMaster[id];
+function selectImage(imgid, buttonid, dest) {
+    let image = document.getElementById(imgid);
+    let imgObj = imageMaster[imgid];
+    let buttons = document.getElementById(buttonid).getElementsByTagName("button"); //array of the buttons
+
+    //Change Image
     image.src = `assets/images/${imgObj[dest]}.png`;
     image.title = imgObj["title" + dest[3]];
     imgObj.current = dest;
+
+    //Update Button Colors
+    for(let i = 0; i < imgObj.numImages; i++) { //set all to gold before setting desired button to black
+        buttons[i].style.color = 'rgb(149, 113, 23)';
+    }
+    buttons[dest[3]].style.color = 'black';
 }
