@@ -43,7 +43,6 @@
                 <ul>
                     <li>This Website (Personal)</li>
                     <li>Switch Dock Modification (Personal)</li>
-                    <li>"Fire Burning" Joke Gift (Personal)</li>
                     <li>Minecraft Redstone Designs (Personal)</li>
                     <li>Project Emrick (School)</li>
                 </ul>
@@ -191,19 +190,42 @@
                     <p>
                         My brother once sent me a meme with a fire alarm pull station that, when triggered, played the song 
                         <a href="https://www.youtube.com/watch?v=YkyhvCdJ_vM" target="_blank">"Fire Burning" by RedOne and Sean Kingston</a> instead of setting off an alarm.
-                        Specifically, the line that says "Somebody call 9-1-1! Shawty's fire burning on the dance floor!" My brother jokingly asked me "isn't
-                        this the kind of stuff that you can make?". Yes, Harrison. Yes I can.
+                        Specifically, it played the line that says "Somebody call 9-1-1! Shawty's fire burning on the dance floor!" My brother asked me "isn't
+                        this the kind of stuff that you can make?". Yes, Harrison. Yes I can. And you're getting it for your birthday.
                     </p>
                     <p>
                         Since I doubt my brother is regularly checking my portfolio website, I am comfortable talking about my progress here. I started out by looking into
                         sound modules for arduino projects. I had started to design this whole schematic on KiCad and was considering making a PCB before I realized I was way
                         overengineering this whole thing. If I could get one of the boards and speakers that they use in those musical greeting cards, that would be perfect.
-                        Turns out you can buy kits for them online and program them to play whatever sound you want. So, while I do want to learn how to play sound from a MCU
+                        Turns out you can buy kits for them online and program them to play whatever sound you want. So, while I do want to learn how to play a song from a MCU
                         in the future, this method seems a lot more fitting for this project.
                     </p>
                     <p>
-                        I only need a small number of parts, including a battery pack, the playback board and speaker, and the fire alarm lever (I can't wait for Amazon to
-                        recommend me fire alarms now). Then I will just need to solder it all together, record the song onto the board, and assemble the project.
+                        I only needed a small number of parts, including a battery pack, the playback board and speaker, and the fire alarm lever (I can't wait for Amazon to
+                        recommend me fire alarms now). The greeting card chip operates at 4.5 to 5 volts, so I got a AA battery holder for 3 batteries (4.5V). I went with AA
+                        instead of Li-ion etc. because I wanted the batteries to be replaceable. I also added a simple power switch to prevent the batteries from draining when
+                        it isn't being used. See the full schematic I made for the device below in the image gallery.
+                        Soldering the pieces together took about 30 minutes, and once I found a way to arrange the parts inside of the pull station, I was
+                        done! This was a very fun and simple project but I am proud of it nonetheless. I can't wait to give it to my brother, and I wonder if he even remembers
+                        asking me if I could make it (we'll see).
+                    </p>
+                    <div id="firegallery" class="projgallery">
+                        <div class="galleryframe">
+                            <img id="fireimg" class="galleryimg" src="assets/images/fire_parts.png" title="All of the parts for the project">
+                        </div>
+                        <div class="gallerysel">
+                            <button onclick="prevImage('fireimg', 'firebuttons')">⮜</button>
+                            <div id="firebuttons">
+                                <button class="defbutton" onclick="selectImage('fireimg', 'firebuttons', 'img0')">⬤</button>
+                                <button onclick="selectImage('fireimg', 'firebuttons', 'img1')">⬤</button>
+                                <button onclick="selectImage('fireimg', 'firebuttons', 'img2')">⬤</button>
+                                <button onclick="selectImage('fireimg', 'firebuttons', 'img3')">⬤</button>
+                            </div>
+                            <button onclick="nextImage('fireimg', 'firebuttons')">⮞</button>
+                        </div>
+                    </div>
+                    <p>
+                        Click <a href="https://www.youtube.com/watch?v=fXCZBQ1M76I" target="_blank"><b>HERE</b></a> for a video demonstration of the completed project.
                     </p>
                 </div>
             </div>

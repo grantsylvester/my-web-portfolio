@@ -15,6 +15,19 @@ const _switchImages = {
     "title3" : "NeoPixel LED breadboard setup and demonstration"
 }
 
+const _fireImages = {
+    "numImages" : 4,
+    "current" : "img0",
+    "img0" : "fire_parts",
+    "img1" : "fire_schematic",
+    "img2" : "fire_breadboard",
+    "img3" : "fire_assembled",
+    "title0" : "All of the parts for the project",
+    "title1" : "Schematic for the device",
+    "title2" : "Breadboard testing",
+    "title3" : "Complete assembly of the project"
+}
+
 const _minecraftImages = {
     "numImages" : 4,
     "current" : "img0",
@@ -38,12 +51,14 @@ const _emrickImages = {
 }
 
 const switchImages = _switchImages;
+const fireImages = _fireImages;
 const minecraftImages = _minecraftImages;
 const emrickImages = _emrickImages;
 
 const _imageMaster = {
     //image id : gallery object
     "switchimg" : switchImages,
+    "fireimg" : fireImages,
     "minecraftimg" : minecraftImages,
     "emrickimg" : emrickImages
 };
