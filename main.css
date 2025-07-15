@@ -243,6 +243,11 @@ a.navlink:active {
         font-size: large;
     }
 
+    .selbuttons {
+        display: flex;
+        flex-direction: row;
+    }
+
     .defbutton {
     color: black;
 }
