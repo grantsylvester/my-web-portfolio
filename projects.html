@@ -24,8 +24,9 @@
             <a class="sublink" href="#fire">"Fire Burning" Joke Gift</a>
             <a class="sublink" href="#minecraft">Minecraft Redstone Designs</a>
             <a href="#school">School Projects</a>
-            <a class="sublink" href="#agrovolo">Agrovolo Crop Drone</a>
+            <a class="sublink" href="#agrovolo">Agr0volo Crop Drone</a>
             <a class="sublink" href="#emrick">Project Emrick</a>
+            <a class="sublink" href="#backpack">Smart Backpack</a>
             <a class="sublink" href="#USBTrans">USB Transceiver</a>
             <a class="sublink" href="#smarthome">Smart Home System</a>
             <a class="sublink" href="#jos">JOS Project</a>
@@ -44,7 +45,8 @@
                 <ul>
                     <li>This Website (Personal)</li>
                     <li>Switch Dock Modification (Personal)</li>
-                    <li>Agrovolo Crop Health Monitoring Drone (School)</li>
+                    <li>Agr0volo Crop Health Monitoring Drone (School)</li>
+                    <li>Smart Backpack (School)</li>
                     <li>Project Emrick (School)</li>
                 </ul>
             </p>
@@ -303,16 +305,19 @@
             <div id="agrovolo" class="projentry">
                 <div class="projheadercontainer">
                     <button onclick="descDropdown('agrovolo')">Hide</button>
-                    <h3 class="projheader">Agrovolo Crop Health Monitoring Drone</h3>
+                    <h3 class="projheader">Agr0volo Crop Health Monitoring Drone</h3>
                 </div>
                 <div class="projentrycontent">
                     <p>
-                        This semester, I decided to join the new Embedded Systems at Purdue (ES@P) club. I chose to join the Agrovolo team, which is developing a
-                        drone that farmers can use to generate a color-coded map of their crops' health, highlighting areas that may need special attention. While I have not
-                        had the opportunity to contribute yet <small>(the semester just started)</small>, I hope that I will be able to contribute my skills to the ground control 
-                        station design team within the Agrovolo project. This will entail working with others to design a PCB and firmware for the manual control of the drone.
-                        I am also excited to learn more about RF/antenna design and wireless communications with this project. This project could be one of the highlights of my
-                        senior year, and I am very excited to get started on it.
+                        This semester, I decided to join the new Embedded Systems at Purdue (ES@P) club. I chose to join the Agr0volo team, which is developing a
+                        drone that farmers can use to generate a color-coded map of their crops' health, highlighting areas that may need special attention. So far,
+                        I have been able to contribute my knowledge on PCB design to the ground control station team. We are designing the drone's controller, which
+                        will be able to direct the drone as well as display the drone's GPS location, battery life, and other important data that the drone may send
+                        back. The controller will have an LCD screen to display this information, and an SD card slot for the user to collect all of the data on
+                        where and when photos were taken. It will communicate with the drone using an <a href="https://howtomechatronics.com/tutorials/arduino/arduino-wireless-communication-nrf24l01-tutorial/" target="_blank">nRF24L01 transceiver</a> 
+                        module. My team has made great progress on
+                        this project so far, as we are done with our schematic and will start PCB Layout and breadboard prototyping soon. I am super excited to
+                        see where this project goes, and I am having a great time applying my skills to such a cool project.
                     </p>
                 </div>
             </div>
@@ -329,7 +334,8 @@
                         shows at night games and nighttime parades alike. As a part of the software team, I helped program the devices. One specific thing that I contributed
                         was the code for the status light on the top of each unit, that lets the user know if it is on, off, connecting to WiFi, low on battery, etc. The 
                         project had its debut with the band's <a href="https://www.youtube.com/watch?v=GNstIQ6atBE" target="_blank">"Disney 101" halftime show</a> when Purdue played Oregon 
-                        and definitely put up a fight (L 0-35). Other contributions that I had were related to the assembly of the devices, which were comprised of an ESP32
+                        and definitely put up a fight (L 0-35). The lights have also been used in the Lafayette Christmas Parade and in another halftime show. 
+                        Other contributions that I had were related to the assembly of the devices, which were comprised of an ESP32
                         microcontroller, a small Li-ion battery, an external antenna, and the light strips (of course).
                     </p>
                     <p>
@@ -348,6 +354,63 @@
                             <button onclick="nextImage('emrickimg', 'emrickbuttons')">⮞</button>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div id="backpack" class="projentry">
+                <div class="projheadercontainer">
+                    <button onclick="descDropdown('backpack')">Hide</button>
+                    <h3 class="projheader">Smart Backpack</h3>
+                </div>
+                <div class="projentrycontent">
+                    <p>
+                        With the start of my senior year at Purdue came the beginning of my senior design project, and I am determined to make
+                        it a good one. The senior design course at Purdue has been updated to be a two semester course, with the first semester 
+                        serving as the planning and problem scoping phase and the second being the design and building phase.
+                    </p>
+                    <h4>The Idea</h4>
+                    <p>
+                        Coming up with a good idea for a product was difficult, but after a lot of brainstorming, my team came up with the idea
+                        of designing a "Smart Backpack" (we are waiting for a better name to reveal itself to us). The idea came from a compilation
+                        of all of our grievances with backpacks:
+                    </p>
+                    <ul>
+                        <li>Losing our backpack</li>
+                        <li>Remembering our backpack but leaving our water bottles</li>
+                        <li>Losing items from forgetting to zip the pockets</li>
+                        <li>Spilling a liquid inside of the bag, ruining other items</li>
+                        <li>Back sweat on a hot day</li>
+                    </ul>
+                    <p>
+                        We realized that in an era of so many different kinds of smart wearables, backpacks have remained dumb. And that is dumb. So
+                        we want to fix these problems with our smart backpack.
+                    </p>
+                    <p>
+                        We are still in the planning phase, but we have a lot of ideas to address the above issues. The simplest one is to embed a GPS in
+                        the bag so that it can notify the user if they left the bag behind in a non-home location. This will help users remember to go grab
+                        their forgotten bag before it gets stolen. The water bottle issue is harder to solve, but our idea is to add a flex potentiometer to
+                        the bottle holder's elastic. This way, we can detect if the bottle is gone and let the user know if they entered a location with it
+                        are leaving without it.
+                    </p>
+                    <p>
+                        One of our methods for communicating with the user will be through haptic feedback in the shoulder straps/back. This could potentially
+                        be used for the previously mentioned features, as well as our open-zipper detection feature. We want to use hall-effect sensors to tell
+                        if the user has left their zipper open, and give them a buzz on the shoulder to notify them. This could also alert the user to a liquid
+                        spill inside of the bag, detected by a moisture sensor in the bottom.
+                    </p>
+                    <p>
+                        Now for our "stretch feature". I personally HATE when my back gets sweaty when I wear a backpack in the warm months. If we can figure out
+                        how to accomplish it in a feasible way, we would like to add a back-cooling system that can provide air circulation behind the straps.
+                        This of course could be hard to design, and it is much lower on our priority list for features.
+                    </p>
+                    <h4>Journaling</h4>
+                    <p>
+                        A very valuable skill that is being taught in senior design is how to journal our design process to benefit ourselves, our teammates, our
+                        mentors, and (most importantly in the real world) our replacements. If you so desire, ALL of my journal entries for this project are public on the
+                        <a href="https://eceseniordesign.com/teams/10?semester=Fall2025" target="_blank">ECE Senior Design Website</a>. If you navigate to my member page,
+                        the journal entries start with week 5 and will continue through the end of the project. I highly encourage you to check it out. I am very proud
+                        of my journaling skills, and it will give you a glimpse into my engineering design approach.
+                    </p>
                 </div>
             </div>
 
